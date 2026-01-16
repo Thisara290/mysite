@@ -8,7 +8,7 @@
         
         <div class="nav-menu" :class="{ active: isMenuOpen }">
           <router-link to="/" class="nav-link" @click="closeMenu">Home</router-link>
-          <router-link to="/about" class="nav-link" @click="closeMenu">About</router-link>
+          <router-link to="/about" class="nav-link" @click="closeMenu">About Me</router-link>
           <router-link to="/projects" class="nav-link" @click="closeMenu">Projects</router-link>
           <router-link to="/blogs" class="nav-link" @click="closeMenu">Blogs</router-link>
           <router-link to="/contact" class="nav-link" @click="closeMenu">Contact</router-link>

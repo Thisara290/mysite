@@ -72,6 +72,15 @@
             </div>
           </div>
         </div>
+
+        <div class="resume-section">
+          <a href="https://res.cloudinary.com/djkw8ijom/image/upload/v1759600731/Thisara-SE_tq8xtr.pdf" 
+             class="btn-resume" 
+             target="_blank" 
+             download="Thisara-Gunasekara-Resume.pdf">
+            Download Resume
+          </a>
+        </div>
       </div>
     </div>
   </div>
@@ -229,5 +238,29 @@ export default {
   .skills-section h3 {
     font-size: 2rem;
   }
+}
+
+.resume-section {
+  text-align: center;
+  margin-top: 60px;
+  padding-top: 40px;
+}
+
+.btn-resume {
+  display: inline-block;
+  padding: 16px 40px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+}
+
+.btn-resume:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
 }
 </style>
