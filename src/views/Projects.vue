@@ -77,6 +77,34 @@
               </div>
             </div>
           </div>
+
+          <div class="analytics-section" v-if="project.analytics">
+            <div class="analytics-header">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="analytics-icon">
+                <line x1="18" y1="20" x2="18" y2="10"></line>
+                <line x1="12" y1="20" x2="12" y2="4"></line>
+                <line x1="6" y1="20" x2="6" y2="14"></line>
+              </svg>
+              <h4 class="analytics-title">Results & Dashboard Integration</h4>
+            </div>
+            
+            <p class="analytics-description" v-html="project.analytics.description"></p>
+            
+            <div class="analytics-image-container">
+              <img :src="project.analytics.image" alt="Analytics Dashboard" class="analytics-image" />
+            </div>
+
+            <div class="analytics-benefits">
+              <div class="benefit-item" v-for="(benefit, index) in project.analytics.benefits" :key="index">
+                <div class="benefit-icon">
+                  <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                </div>
+                <p class="benefit-text" v-html="benefit"></p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -112,6 +140,37 @@ export default {
             {
               name: "AWS Amplify",
               reason: "AWS was selected to host the website on Amplify with a pay-as-you-go model using the client's visa card. Instead of buying a big hosting package upfront, the client can pay as per usage. This allows the client to scale costs as their business grows, making it a cost-effective solution that aligns with business expansion."
+            }
+          ],
+          analytics: {
+            image: "https://res.cloudinary.com/djkw8ijom/image/upload/v1771782903/resultstalalla_kmxxdp.png",
+            description: "I connected this website to a custom dashboard named <a href='https://aurbyn.com/dashify' target='_blank' rel='noopener noreferrer' style='color: #667eea; font-weight: 600; text-decoration: none;'>Dashify</a>. From Dashify, the client can easily change the hero banner, add products, and view real-time analytics such as visitor counts and their countries of origin.",
+            benefits: [
+              "<strong>Proven Results:</strong> Transparent country and visitor demographics demonstrate that I handle SEO, design, and business logic in a truly professional, results-driven way.",
+              "<strong>Custom SaaS Integration:</strong> Clients can see how these analytics are gathered by exploring <a href='https://aurbyn.com/dashify' target='_blank' rel='noopener noreferrer' style='color: #667eea; font-weight: 600; text-decoration: none;'>Dashify</a>.",
+              "<strong>Powerful Ecosystem:</strong> Dashify is my own SaaS application, specifically built to seamlessly integrate with client websites and provide powerful content management and business insights."
+            ]
+          }
+        },
+        {
+          id: 2,
+          title: "Chaminda Products",
+          description: "I pitched a business proposal to the owner of Chaminda Products, a large manufacturing company with multiple distributing outlets in the country. My proposal was to create a modern web presence to publish their company products, enabling them to attract overseas clients, as there is a huge interest in Sri Lankan spices in Europe and other international markets. I successfully designed and developed a comprehensive website showcasing their spice products, making it easy for global consumers and B2B buyers to discover their content and reach out.",
+          images: [
+            "https://res.cloudinary.com/djkw8ijom/image/upload/v1771782808/herochaminda_j8h4ai.png",
+            "https://res.cloudinary.com/djkw8ijom/image/upload/v1771782799/outlets_bz20db.png",
+            "https://res.cloudinary.com/djkw8ijom/image/upload/v1771782793/productlist_vime9m.png",
+            "https://res.cloudinary.com/djkw8ijom/image/upload/v1771782790/productpagechaminda_ilz0cm.png"
+          ],
+          link: "https://www.matarachaminda.com",
+          techDetails: [
+            {
+              name: "Web Development",
+              reason: "I built the entire front-end showcasing all of their outlets with addresses and map locations, as well as a full product catalog to ensure maximum international reach for their spice products."
+            },
+            {
+              name: "Business Strategy & Consulting",
+              reason: "Beyond development, I directly identified this opportunity, pitched the owner on the potential of the European market, and executed the strategy to bring a traditional manufacturing business online."
             }
           ]
         }
@@ -425,6 +484,79 @@ export default {
   margin: 0;
 }
 
+.analytics-section {
+  margin-top: 2.5rem;
+  padding-top: 2.5rem;
+  border-top: 2px solid #e9ecef;
+}
+
+.analytics-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 1rem;
+}
+
+.analytics-icon {
+  color: #667eea;
+}
+
+.analytics-title {
+  font-size: 1.5rem;
+  color: #333;
+  margin: 0;
+  font-weight: 700;
+}
+
+.analytics-description {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+.analytics-image-container {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+  border: 1px solid #e9ecef;
+}
+
+.analytics-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.analytics-benefits {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 12px;
+}
+
+.benefit-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.benefit-icon {
+  color: #28ca42;
+  margin-top: 4px;
+  flex-shrink: 0;
+}
+
+.benefit-text {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #444;
+  margin: 0;
+}
+
 .empty-state {
   text-align: center;
   padding: 80px 20px;
@@ -472,6 +604,22 @@ export default {
   
   .tech-reason {
     font-size: 0.9rem;
+  }
+
+  .analytics-title {
+    font-size: 1.3rem;
+  }
+  
+  .analytics-description {
+    font-size: 1rem;
+  }
+  
+  .analytics-benefits {
+    padding: 1.2rem;
+  }
+  
+  .benefit-text {
+    font-size: 0.95rem;
   }
 }
 </style>
