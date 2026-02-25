@@ -71,7 +71,7 @@
               <h4 class="technologies-title">Technologies Used</h4>
               <div class="tech-details-list">
                 <div class="tech-detail-item" v-for="(tech, index) in project.techDetails" :key="index">
-                  <span class="tech-name">{{ tech.name }}</span>
+                  <span class="tech-name" v-html="tech.name"></span>
                   <p class="tech-reason">{{ tech.reason }}</p>
                 </div>
               </div>
@@ -165,14 +165,27 @@ export default {
           link: "https://www.matarachaminda.com",
           techDetails: [
             {
-              name: "Web Development",
-              reason: "I built the entire front-end showcasing all of their outlets with addresses and map locations, as well as a full product catalog to ensure maximum international reach for their spice products."
+              name: "Next.js",
+              reason: "I built the website using Next.js to take advantage of its server-side rendering capabilities, which is essential for SEO optimization. This ensures the product catalog ranks well on international search engines and provides a component-based architecture for clean, maintainable code."
+            },
+            {
+              name: "AWS Amplify",
+              reason: "The website is hosted on AWS Amplify using a pay-as-you-go model tied to the client's account. This eliminates the need for large upfront hosting packages, allowing the client to scale costs as their export business grows — a cost-effective and flexible solution."
+            },
+            {
+              name: "Cloudinary",
+              reason: "All product and outlet images are stored and served via Cloudinary. This ensures fast, optimized image delivery globally with automatic format conversion and responsive sizing, giving international visitors a smooth browsing experience regardless of their connection speed."
+            },
+            {
+              name: "<a href='https://aurbyn.com/dashify' target='_blank' rel='noopener noreferrer' style='color: #667eea; text-decoration: none; font-weight: 700;'>Dashify</a> (Custom Backend Dashboard)",
+              reason: "I integrated the website with my own SaaS application, Dashify. Through the Dashify dashboard, the client can manage product listings, update outlet information, and view real-time visitor analytics — giving them full control over their web presence without needing developer assistance."
             },
             {
               name: "Business Strategy & Consulting",
-              reason: "Beyond development, I directly identified this opportunity, pitched the owner on the potential of the European market, and executed the strategy to bring a traditional manufacturing business online."
+              reason: "Beyond development, I directly identified this opportunity, pitched the owner on the potential of the European spice market, and executed the strategy to bring a traditional manufacturing business online and make it accessible to global B2B buyers."
             }
-          ]
+          ],
+          
         }
       ]
     }

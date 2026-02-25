@@ -1,27 +1,46 @@
 <template>
   <div class="home">
-    <header class="hero">
-      <div class="hero-content">
-        <div class="profile-container">
+    <!-- SECTION 1: SLOGAN HERO -->
+    <section class="banner-slogan">
+      <div class="banner-content">
+        <h1 class="slogan-title">
+          <span class="slogan-top">The story will start again,</span>
+          <span class="slogan-bottom">But with a different <span class="highlight">character.</span></span>
+        </h1>
+      </div>
+    </section>
+
+    <!-- SECTION 2: POSH PROFILE SECTION -->
+    <section class="posh-profile">
+      <div class="container posh-container">
+        <div class="posh-image-box">
+          <div class="decorative-blob"></div>
           <img 
             src="https://res.cloudinary.com/djkw8ijom/image/upload/v1759600660/1000643852_wupbsz.jpg" 
             alt="Thisara Gunasekara - Digital Marketing Coordinator" 
-            class="profile-image"
+            class="posh-profile-img"
           />
+          <div class="glass-badge">
+            <span class="badge-icon">🚀</span>
+            <span class="badge-text">Result Driven</span>
+          </div>
         </div>
-        <h1 class="hero-title">Thisara Gunasekara</h1>
-        <p class="hero-subtitle">Digital Marketing Coordinator</p>
-        <p class="hero-description">
-          If your business image needs to improve in the digital space, you've come to the right place. 
-          I specialize in creating modern, SEO-friendly websites and coordinating comprehensive social media strategies 
-          that elevate your brand's online presence and drive real results.
-        </p>
-        <div class="hero-buttons">
-          <router-link to="/contact" class="btn btn-primary">Get In Touch</router-link>
-          <router-link to="/projects" class="btn btn-secondary">My Projects</router-link>
+        <div class="posh-text-box">
+          <div class="greeting-tag">Hello, I am</div>
+          <h2 class="posh-name">Thisara Gunasekara</h2>
+          <h3 class="posh-role">Digital Marketing Coordinator & Manager</h3>
+          <p class="posh-desc">
+            If your company's image needs to improve in the digital space, you've come to the right place. 
+            I specialize in creating modern, SEO-friendly websites and coordinating comprehensive digital strategies 
+            that elevate your brand's online presence and drive real, measurable results. Let's rewrite your digital story together.
+          </p>
+          <div class="posh-buttons">
+            <router-link to="/contact" class="posh-btn primary">Get In Touch</router-link>
+            <router-link to="/projects" class="posh-btn outline">View My Work</router-link>
+          </div>
         </div>
       </div>
-    </header>
+    </section>
     
     <section class="services">
       <div class="container">
@@ -29,64 +48,48 @@
         <p class="section-subtitle">Comprehensive Digital Marketing Solutions for Your Business</p>
         
         <div class="services-grid">
-          <div class="service-card">
-            <div class="service-icon">🌐</div>
-            <h3>Modern SEO-Friendly Websites</h3>
-            <p>I create business-related, modern websites that are optimized for search engines. Your website will not only look professional but also rank well on Google, helping potential customers find you easily.</p>
+          <div class="service-card modern-card">
+            <div class="service-icon-wrapper">
+              <i class="service-icon">🌐</i>
+            </div>
+            <div class="service-content">
+              <h3>Modern SEO-Friendly Websites</h3>
+              <p>I create business-related, modern websites that are optimized for search engines. Your website will not only look professional but also rank well on Google, driving organic traffic.</p>
+            </div>
+            <div class="card-glow"></div>
           </div>
           
-          <div class="service-card">
-            <div class="service-icon">📱</div>
-            <h3>Social Media Coordination</h3>
-            <p>I develop and execute comprehensive social media plans tailored to your business goals. From strategy to execution, I ensure your brand maintains a consistent and engaging presence across all platforms.</p>
+          <div class="service-card modern-card">
+            <div class="service-icon-wrapper">
+              <i class="service-icon">📱</i>
+            </div>
+            <div class="service-content">
+              <h3>Social Media Coordination</h3>
+              <p>I develop and execute comprehensive social media plans tailored to your business goals. From strategy to execution, ensuring your brand maintains a consistent presence.</p>
+            </div>
+            <div class="card-glow"></div>
           </div>
           
-          <div class="service-card">
-            <div class="service-icon">🎯</div>
-            <h3>Multi-Platform Expertise</h3>
-            <p>I have in-depth knowledge and experience with major social media platforms including Facebook, TikTok, Instagram, and LinkedIn. Each platform requires a unique approach, and I know how to maximize your reach on each one.</p>
+          <div class="service-card modern-card">
+            <div class="service-icon-wrapper">
+              <i class="service-icon">🎬</i>
+            </div>
+            <div class="service-content">
+              <h3>Content Creation</h3>
+              <p>I create engaging reels, images, and videos that capture attention. From short-form TikToks to professional LinkedIn posts, I produce content that resonates.</p>
+            </div>
+            <div class="card-glow"></div>
           </div>
           
-          <div class="service-card">
-            <div class="service-icon">🎬</div>
-            <h3>Content Creation</h3>
-            <p>I create engaging reels, images, and videos that capture attention and drive engagement. Whether it's short-form video content for TikTok and Instagram Reels or professional images for LinkedIn, I produce content that resonates with your audience.</p>
-          </div>
-          
-          <div class="service-card">
-            <div class="service-icon">📊</div>
-            <h3>Ad Campaign Management</h3>
-            <p>I know how to run effective ad campaigns across different platforms. From setting up campaigns and targeting the right audience to optimizing ad performance and managing budgets, I ensure your advertising dollars deliver maximum ROI.</p>
-          </div>
-          
-          <div class="service-card">
-            <div class="service-icon">🚀</div>
-            <h3>Digital Brand Enhancement</h3>
-            <p>I help improve your business image in the digital space by creating cohesive branding, developing your online voice, and ensuring all your digital touchpoints work together to build trust and credibility.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-    
-    <section class="platforms">
-      <div class="container">
-        <h2 class="section-title">Platform Expertise</h2>
-        <div class="platforms-list">
-          <div class="platform-item">
-            <span class="platform-name">Facebook</span>
-            <p>Page management, content strategy, community engagement, and targeted advertising</p>
-          </div>
-          <div class="platform-item">
-            <span class="platform-name">TikTok</span>
-            <p>Trending content creation, viral video strategies, and influencer collaboration</p>
-          </div>
-          <div class="platform-item">
-            <span class="platform-name">Instagram</span>
-            <p>Reels, Stories, feed optimization, hashtag strategy, and visual branding</p>
-          </div>
-          <div class="platform-item">
-            <span class="platform-name">LinkedIn</span>
-            <p>Professional content, B2B marketing, thought leadership, and network building</p>
+          <div class="service-card modern-card">
+            <div class="service-icon-wrapper">
+              <i class="service-icon">📊</i>
+            </div>
+            <div class="service-content">
+              <h3>Ad Campaign Management</h3>
+              <p>I know how to run effective ad campaigns. From targeting the right audience to optimizing performance, I ensure your advertising dollars deliver maximum ROI.</p>
+            </div>
+            <div class="card-glow"></div>
           </div>
         </div>
       </div>
@@ -113,213 +116,357 @@ export default {
   min-height: 100vh;
 }
 
-.hero {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
-  padding: 80px 0 100px;
+/* Banner Slogan Section */
+.banner-slogan {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white; 
+  position: relative;
   text-align: center;
+  overflow: hidden;
 }
 
-.hero-content {
-  max-width: 900px;
-  margin: 0 auto;
+.banner-slogan::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(102, 126, 234, 0.05) 0%, rgba(255,255,255,0) 70%);
+  animation: rotate 20s linear infinite;
+  z-index: 0;
+}
+
+@keyframes rotate {
+  100% { transform: rotate(360deg); }
+}
+
+.banner-content {
+  position: relative;
+  z-index: 1;
   padding: 0 20px;
 }
 
-.profile-container {
-  width: 180px;
-  height: 180px;
-  margin: 0 auto 35px;
-  border-radius: 50%;
-  overflow: hidden;
-  border: 5px solid rgba(255, 255, 255, 0.3);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease;
-}
-
-.profile-container:hover {
-  transform: scale(1.05);
-}
-
-.profile-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-.hero-title {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-  font-weight: 700;
-}
-
-.hero-subtitle {
-  font-size: 1.8rem;
-  margin-bottom: 1.5rem;
-  opacity: 0.95;
-  font-weight: 600;
-}
-
-.hero-description {
-  font-size: 1.2rem;
-  margin-bottom: 2.5rem;
-  opacity: 0.95;
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
-  line-height: 1.8;
-}
-
-.hero-buttons {
+.slogan-title {
   display: flex;
-  gap: 1rem;
-  justify-content: center;
-  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 15px;
 }
 
-.btn {
-  padding: 14px 35px;
-  text-decoration: none;
+.slogan-top {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #1a1a1a;
+  letter-spacing: -1px;
+  animation: slideUp 1s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.slogan-bottom {
+  font-size: 4rem;
+  font-weight: 900;
+  color: #1a1a1a;
+  letter-spacing: -2px;
+  line-height: 1.1;
+  animation: slideUp 1s cubic-bezier(0.165, 0.84, 0.44, 1) 0.3s forwards;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.highlight {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+@keyframes slideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* Posh Profile Section */
+.posh-profile {
+  padding: 120px 0;
+  background: #fafafa;
+}
+
+.posh-container {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.posh-image-box {
+  flex: 1;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.decorative-blob {
+  position: absolute;
+  width: 450px;
+  height: 450px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+  animation: morph 8s ease-in-out infinite alternate;
+  z-index: 0;
+  opacity: 0.15;
+}
+
+@keyframes morph {
+  0% { border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%; }
+  100% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+}
+
+.posh-profile-img {
+  width: 380px;
+  height: 480px;
+  object-fit: cover;
+  border-radius: 20px;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+  transition: transform 0.4s ease;
+}
+
+.posh-image-box:hover .posh-profile-img {
+  transform: translateY(-10px);
+}
+
+.glass-badge {
+  position: absolute;
+  bottom: 50px;
+  right: -10px;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 15px 25px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+  border: 1px solid rgba(255,255,255,0.7);
+  z-index: 2;
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+.badge-icon {
+  font-size: 1.5rem;
+}
+
+.badge-text {
+  font-weight: 700;
+  color: #1a1a1a;
+  letter-spacing: -0.5px;
+}
+
+.posh-text-box {
+  flex: 1.2;
+}
+
+.greeting-tag {
+  display: inline-block;
+  padding: 8px 16px;
+  background: rgba(102, 126, 234, 0.1);
+  color: #667eea;
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  margin-bottom: 25px;
+  letter-spacing: 0.5px;
+}
+
+.posh-name {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: #1a1a1a;
+  line-height: 1.1;
+  margin-bottom: 15px;
+  letter-spacing: -1px;
+}
+
+.posh-role {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #764ba2;
+  margin-bottom: 30px;
+}
+
+.posh-desc {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: #666;
+  margin-bottom: 40px;
+  max-width: 90%;
+}
+
+.posh-buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.posh-btn {
+  padding: 16px 35px;
   border-radius: 30px;
   font-weight: 600;
-  font-size: 1rem;
-  transition: all 0.3s ease;
+  font-size: 1.05rem;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
   display: inline-flex;
   align-items: center;
   justify-content: center;
 }
 
-.btn-primary {
-  background: white;
-  color: #667eea;
-}
-
-.btn-primary:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 12px 30px rgba(0,0,0,0.25);
-}
-
-.btn-secondary {
-  background: transparent;
+.posh-btn.primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: white;
-  border: 2px solid white;
+  box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
 }
 
-.btn-secondary:hover {
-  background: white;
+.posh-btn.primary:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 35px rgba(102, 126, 234, 0.4);
+}
+
+.posh-btn.outline {
+  background: transparent;
+  color: #1a1a1a;
+  border: 2px solid #e2e8f0;
+}
+
+.posh-btn.outline:hover {
+  border-color: #667eea;
   color: #667eea;
-  transform: translateY(-3px);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(102, 126, 234, 0.1);
 }
 
 .services {
-  padding: 100px 0;
+  padding: 120px 0;
   background: #ffffff;
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
+  position: relative;
 }
 
 .section-title {
-  font-size: 2.8rem;
+  font-size: 3rem;
   margin-bottom: 1rem;
-  color: #333;
+  color: #1a1a1a;
   text-align: center;
-  font-weight: 700;
+  font-weight: 800;
+  letter-spacing: -1px;
 }
 
 .section-subtitle {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   color: #666;
   text-align: center;
   margin-bottom: 4rem;
-  max-width: 700px;
+  max-width: 600px;
   margin-left: auto;
   margin-right: auto;
 }
 
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 2.5rem;
-  margin-top: 3rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
 }
 
-.service-card {
-  background: #f8f9fa;
+.modern-card {
+  background: #ffffff;
   padding: 2.5rem;
-  border-radius: 15px;
-  text-align: center;
-  transition: all 0.3s ease;
-  border: 2px solid transparent;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
 }
 
-.service-card:hover {
+.modern-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 15px 40px rgba(102, 126, 234, 0.15);
-  border-color: #667eea;
-  background: white;
+  box-shadow: 0 20px 40px rgba(102, 126, 234, 0.12);
+  border-color: rgba(102, 126, 234, 0.3);
+}
+
+.card-glow {
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  width: 150px;
+  height: 150px;
+  background: radial-gradient(circle, rgba(102, 126, 234, 0.15) 0%, rgba(255,255,255,0) 70%);
+  border-radius: 50%;
+  z-index: -1;
+  transition: transform 0.6s ease;
+}
+
+.modern-card:hover .card-glow {
+  transform: scale(2);
+}
+
+.service-icon-wrapper {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.modern-card:hover .service-icon-wrapper {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 }
 
 .service-icon {
-  font-size: 3.5rem;
-  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  font-style: normal;
+  transition: transform 0.3s ease;
 }
 
-.service-card h3 {
-  font-size: 1.5rem;
+.modern-card:hover .service-icon {
+  transform: scale(1.1);
+  filter: brightness(0) invert(1);
+}
+
+.service-content h3 {
+  font-size: 1.3rem;
   margin-bottom: 1rem;
-  color: #333;
+  color: #1a1a1a;
   font-weight: 700;
+  letter-spacing: -0.5px;
 }
 
-.service-card p {
+.service-content p {
   font-size: 1rem;
   line-height: 1.7;
   color: #666;
+  margin: 0;
 }
 
-.platforms {
-  padding: 100px 0;
-  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-}
-
-.platforms-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-  margin-top: 3rem;
-}
-
-.platform-item {
-  background: white;
-  padding: 2rem;
-  border-radius: 12px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-  transition: all 0.3s ease;
-}
-
-.platform-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
-}
-
-.platform-name {
-  display: block;
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #667eea;
-  margin-bottom: 0.8rem;
-}
-
-.platform-item p {
-  font-size: 1rem;
-  line-height: 1.6;
-  color: #666;
-}
 
 .cta {
   padding: 100px 0;
@@ -361,49 +508,51 @@ export default {
   box-shadow: 0 15px 35px rgba(0,0,0,0.3);
 }
 
-@media (max-width: 768px) {
-  .hero-title {
-    font-size: 2.2rem;
+@media (max-width: 992px) {
+  .posh-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 50px;
   }
   
-  .hero-subtitle {
-    font-size: 1.4rem;
-  }
-  
-  .hero-description {
-    font-size: 1rem;
-  }
-  
-  .hero-buttons {
+  .posh-text-box {
+    display: flex;
     flex-direction: column;
     align-items: center;
   }
   
-  .btn {
-    width: 100%;
-    max-width: 280px;
-  }
+  .slogan-top { font-size: 2.2rem; }
+  .slogan-bottom { font-size: 2.8rem; }
+  .posh-name { font-size: 2.8rem; }
+  .posh-desc { max-width: 100%; }
+  .posh-buttons { justify-content: center; }
+  .decorative-blob { width: 350px; height: 350px; }
+  .posh-profile-img { width: 320px; height: 420px; }
+}
+
+@media (max-width: 768px) {
+  .slogan-top { font-size: 1.8rem; }
+  .slogan-bottom { font-size: 2.2rem; }
   
-  .profile-container {
-    width: 150px;
-    height: 150px;
-  }
+  .posh-name { font-size: 2.2rem; }
+  .posh-role { font-size: 1.2rem; }
+  .posh-desc { font-size: 1rem; }
+  
+  .posh-profile-img { width: 280px; height: 380px; }
+  .decorative-blob { width: 300px; height: 300px; }
+  
+  .posh-buttons { flex-direction: column; width: 100%; }
+  .posh-btn { width: 100%; }
+  
+  .glass-badge { right: -10px; padding: 10px 15px; }
   
   .section-title {
-    font-size: 2.2rem;
-  }
-  
-  .section-subtitle {
-    font-size: 1.1rem;
+    font-size: 2.4rem;
   }
   
   .services-grid {
     grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-  
-  .platforms-list {
-    grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
   
   .cta h2 {

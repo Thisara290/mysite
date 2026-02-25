@@ -74,7 +74,7 @@
         </div>
 
         <div class="resume-section">
-          <a href="https://res.cloudinary.com/djkw8ijom/image/upload/v1759600731/Thisara-SE_tq8xtr.pdf" 
+          <a href="https://res.cloudinary.com/djkw8ijom/image/upload/v1772044318/Thisara_Gunasekara_-_Digital_Project_Manager_w057so.pdf" 
              class="btn-resume" 
              target="_blank" 
              download="Thisara-Gunasekara-Resume.pdf">
