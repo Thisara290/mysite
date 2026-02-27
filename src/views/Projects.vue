@@ -1,5 +1,15 @@
 <template>
   <div class="projects">
+    <!-- SECTION 1: SLOGAN HERO -->
+    <section class="banner-slogan">
+      <div class="banner-content">
+        <h1 class="slogan-title">
+          <span class="slogan-top">Don't Take Rest After Your First Victory.</span>
+          <span class="slogan-bottom">Because If You Fail In Second, More Lips Are Waiting To Say That Your First Victory Was <span class="highlight">Just Luck.</span></span>
+        </h1>
+      </div>
+    </section>
+
     <div class="container">
       <header class="page-header">
         <h1>My Projects</h1>
@@ -184,8 +194,34 @@ export default {
               name: "Business Strategy & Consulting",
               reason: "Beyond development, I directly identified this opportunity, pitched the owner on the potential of the European spice market, and executed the strategy to bring a traditional manufacturing business online and make it accessible to global B2B buyers."
             }
+          ]
+        },
+        {
+          id: 3,
+          title: "PMR Construction",
+          description: "I directly contacted the client and pitched the necessity of having a professional digital presence to uplift their construction business. I explained that a .lk domain website ensures business validity and acts as a professional portfolio where potential clients can view their best projects in one click. Furthermore, I emphasized the power of Facebook and TikTok to provide regular updates and run targeted ads to find new customers. After successfully onboarding them, I developed a modern website, established their social media profiles with custom branding (logos and covers), and coordinated with my team to run effective ad campaigns.",
+          images: [
+            "https://res.cloudinary.com/djkw8ijom/image/upload/v1772216128/pmr_jydmv5.png"
           ],
-          
+          link: "https://www.pmrconstruction.lk",
+          techDetails: [
+            {
+              name: "Next.js",
+              reason: "I developed the website using Next.js to ensure fast load times and excellent SEO performance, which is crucial for a local construction company looking to be easily found on Google by potential clients."
+            },
+            {
+              name: "AWS Hosting",
+              reason: "The application is deployed on AWS, providing a highly reliable and scalable hosting solution that ensures the site remains fast and accessible as the business runs ads and scales its traffic."
+            },
+            {
+              name: "Digital Marketing & Branding",
+              reason: "I established their complete digital footprint by creating polished Facebook and TikTok profiles, designing necessary branding assets (logos, covers, business posts), and executing targeted ad campaigns to generate leads."
+            },
+            {
+              name: "Strategic Consulting",
+              reason: "I proactively reached out to the business and successfully communicated the value of digital transformation, bridging the gap between traditional construction services and modern digital marketing strategies."
+            }
+          ]
         }
       ]
     }
@@ -198,8 +234,87 @@ export default {
 <style scoped>
 .projects {
   min-height: 100vh;
-  padding: 80px 0;
+  padding: 0 0 80px 0;
   background: #f8f9fa;
+}
+
+/* Banner Slogan Section */
+.banner-slogan {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white; 
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+  margin-bottom: 80px;
+}
+
+.banner-slogan::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(102, 126, 234, 0.05) 0%, rgba(255,255,255,0) 70%);
+  animation: rotate 20s linear infinite;
+  z-index: 0;
+}
+
+@keyframes rotate {
+  100% { transform: rotate(360deg); }
+}
+
+.banner-content {
+  position: relative;
+  z-index: 1;
+  padding: 0 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.slogan-title {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.slogan-top {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #1a1a1a;
+  letter-spacing: -1px;
+  animation: slideUp 1s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.slogan-bottom {
+  font-size: 3rem;
+  font-weight: 900;
+  color: #1a1a1a;
+  letter-spacing: -2px;
+  line-height: 1.2;
+  animation: slideUp 1s cubic-bezier(0.165, 0.84, 0.44, 1) 0.3s forwards;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.highlight {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+@keyframes slideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .container {
@@ -602,6 +717,9 @@ export default {
     grid-template-columns: 1fr;
     gap: 1rem;
   }
+  
+  .slogan-top { font-size: 1.5rem; }
+  .slogan-bottom { font-size: 1.8rem; }
   
   .website-preview-image {
     height: 220px;

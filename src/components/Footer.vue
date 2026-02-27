@@ -1,7 +1,7 @@
 <template>
   <footer class="footer">
     <div class="footer-container">
-      <p>&copy; 2025 Thisara Gunasekara. All rights reserved.</p>
+      <p>&copy; 2026 Thisara Gunasekara. All rights reserved.</p>
       <div class="footer-links">
         <a href="https://wa.me/94776704530" target="_blank" class="social-link" aria-label="WhatsApp">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
