@@ -235,7 +235,7 @@ export default {
 .projects {
   min-height: 100vh;
   padding: 0 0 80px 0;
-  background: #f8f9fa;
+  background: var(--bg-primary);
 }
 
 /* Banner Slogan Section */
@@ -244,7 +244,7 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: white; 
+  background: var(--bg-primary); 
   position: relative;
   text-align: center;
   overflow: hidden;
@@ -258,7 +258,8 @@ export default {
   left: -50%;
   width: 200%;
   height: 200%;
-  background: radial-gradient(circle, rgba(102, 126, 234, 0.05) 0%, rgba(255,255,255,0) 70%);
+  background: radial-gradient(circle, var(--accent-primary) 0%, transparent 70%);
+  opacity: 0.05;
   animation: rotate 20s linear infinite;
   z-index: 0;
 }
@@ -284,7 +285,7 @@ export default {
 .slogan-top {
   font-size: 2.5rem;
   font-weight: 800;
-  color: #1a1a1a;
+  color: var(--text-primary);
   letter-spacing: -1px;
   animation: slideUp 1s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
   opacity: 0;
@@ -294,7 +295,7 @@ export default {
 .slogan-bottom {
   font-size: 3rem;
   font-weight: 900;
-  color: #1a1a1a;
+  color: var(--text-primary);
   letter-spacing: -2px;
   line-height: 1.2;
   animation: slideUp 1s cubic-bezier(0.165, 0.84, 0.44, 1) 0.3s forwards;
@@ -303,7 +304,7 @@ export default {
 }
 
 .highlight {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -330,14 +331,14 @@ export default {
 
 .page-header h1 {
   font-size: 3rem;
-  color: #333;
+  color: var(--text-primary);
   margin-bottom: 1rem;
   font-weight: 700;
 }
 
 .subtitle {
   font-size: 1.3rem;
-  color: #666;
+  color: var(--text-secondary);
 }
 
 .projects-list {
@@ -348,11 +349,11 @@ export default {
 }
 
 .project-card {
-  background: white;
+  background: var(--card-bg);
   border-radius: 20px;
   padding: 2.5rem;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
+  box-shadow: 0 5px 20px var(--card-shadow);
+  border: 1px solid var(--card-border);
 }
 
 .project-card:hover {
@@ -366,7 +367,7 @@ export default {
 
 .project-title {
   font-size: 2rem;
-  color: #333;
+  color: var(--text-primary);
   margin-bottom: 1rem;
   font-weight: 700;
 }
@@ -374,7 +375,7 @@ export default {
 .project-description {
   font-size: 1.1rem;
   line-height: 1.8;
-  color: #666;
+  color: var(--text-secondary);
 }
 
 .project-images-section {
@@ -409,13 +410,13 @@ export default {
 .website-preview-section {
   margin: 2.5rem 0;
   padding: 1.5rem 0;
-  border-top: 2px solid #e9ecef;
-  border-bottom: 2px solid #e9ecef;
+  border-top: 2px solid var(--card-border);
+  border-bottom: 2px solid var(--card-border);
 }
 
 .website-preview-title {
   font-size: 1.3rem;
-  color: #333;
+  color: var(--text-primary);
   margin-bottom: 1rem;
   font-weight: 700;
 }
@@ -440,21 +441,21 @@ export default {
 }
 
 .browser-frame {
-  background: white;
+  background: var(--card-bg);
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 8px 25px var(--card-shadow);
   transition: all 0.3s ease;
-  border: 1px solid #e9ecef;
+  border: 1px solid var(--card-border);
 }
 
 .browser-header {
-  background: #f8f9fa;
+  background: var(--bg-secondary);
   padding: 12px 16px;
   display: flex;
   align-items: center;
   gap: 12px;
-  border-bottom: 1px solid #e9ecef;
+  border-bottom: 1px solid var(--card-border);
 }
 
 .browser-dots {
@@ -482,12 +483,12 @@ export default {
 
 .browser-url-bar {
   flex: 1;
-  background: white;
+  background: var(--bg-primary);
   padding: 6px 12px;
   border-radius: 6px;
   font-size: 0.85rem;
-  color: #666;
-  border: 1px solid #e9ecef;
+  color: var(--text-secondary);
+  border: 1px solid var(--card-border);
   font-family: 'Monaco', 'Menlo', monospace;
 }
 
@@ -536,7 +537,7 @@ export default {
   gap: 1.5rem;
   margin-top: 1rem;
   padding-top: 1rem;
-  border-top: 2px solid #e9ecef;
+  border-top: 2px solid var(--card-border);
 }
 
 .project-duration-section {
@@ -544,7 +545,7 @@ export default {
   align-items: center;
   gap: 8px;
   font-size: 1rem;
-  color: #667eea;
+  color: var(--accent-primary);
   font-weight: 600;
 }
 
@@ -562,7 +563,7 @@ export default {
 .duration-reason {
   font-size: 0.95rem;
   line-height: 1.7;
-  color: #666;
+  color: var(--text-secondary);
   margin: 0;
   font-style: italic;
 }
@@ -573,7 +574,7 @@ export default {
 
 .technologies-title {
   font-size: 1.2rem;
-  color: #333;
+  color: var(--text-primary);
   margin-bottom: 1rem;
   font-weight: 700;
 }
@@ -585,10 +586,10 @@ export default {
 }
 
 .tech-detail-item {
-  background: #f8f9fa;
+  background: var(--bg-secondary);
   padding: 1.2rem;
   border-radius: 12px;
-  border-left: 4px solid #667eea;
+  border-left: 4px solid var(--accent-primary);
   transition: all 0.3s ease;
 }
 
@@ -600,7 +601,7 @@ export default {
 .tech-name {
   display: block;
   font-size: 1.1rem;
-  color: #667eea;
+  color: var(--accent-primary);
   font-weight: 700;
   margin-bottom: 0.5rem;
 }
@@ -608,14 +609,14 @@ export default {
 .tech-reason {
   font-size: 0.95rem;
   line-height: 1.7;
-  color: #666;
+  color: var(--text-secondary);
   margin: 0;
 }
 
 .analytics-section {
   margin-top: 2.5rem;
   padding-top: 2.5rem;
-  border-top: 2px solid #e9ecef;
+  border-top: 2px solid var(--card-border);
 }
 
 .analytics-header {
@@ -626,12 +627,12 @@ export default {
 }
 
 .analytics-icon {
-  color: #667eea;
+  color: var(--accent-primary);
 }
 
 .analytics-title {
   font-size: 1.5rem;
-  color: #333;
+  color: var(--text-primary);
   margin: 0;
   font-weight: 700;
 }
@@ -639,16 +640,16 @@ export default {
 .analytics-description {
   font-size: 1.1rem;
   line-height: 1.8;
-  color: #666;
+  color: var(--text-secondary);
   margin-bottom: 1.5rem;
 }
 
 .analytics-image-container {
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 25px var(--card-shadow);
   margin-bottom: 2rem;
-  border: 1px solid #e9ecef;
+  border: 1px solid var(--card-border);
 }
 
 .analytics-image {
@@ -661,7 +662,7 @@ export default {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  background: #f8f9fa;
+  background: var(--bg-secondary);
   padding: 1.5rem;
   border-radius: 12px;
 }
@@ -681,14 +682,14 @@ export default {
 .benefit-text {
   font-size: 1rem;
   line-height: 1.6;
-  color: #444;
+  color: var(--text-secondary);
   margin: 0;
 }
 
 .empty-state {
   text-align: center;
   padding: 80px 20px;
-  color: #666;
+  color: var(--text-secondary);
   font-size: 1.2rem;
 }
 

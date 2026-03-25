@@ -165,7 +165,7 @@ export default {
 .blogs {
   min-height: 100vh;
   padding: 0 0 80px 0;
-  background: #f8f9fa;
+  background: var(--bg-primary);
 }
 
 /* ── HERO BANNER ─────────────────────────── */
@@ -174,7 +174,7 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: white;
+  background: var(--bg-primary);
   position: relative;
   text-align: center;
   overflow: hidden;
@@ -188,7 +188,8 @@ export default {
   left: -50%;
   width: 200%;
   height: 200%;
-  background: radial-gradient(circle, rgba(102, 126, 234, 0.05) 0%, rgba(255,255,255,0) 70%);
+  background: radial-gradient(circle, var(--accent-primary) 0%, transparent 70%);
+  opacity: 0.05;
   animation: rotate 20s linear infinite;
   z-index: 0;
 }
@@ -214,7 +215,7 @@ export default {
 .slogan-top {
   font-size: 2.5rem;
   font-weight: 800;
-  color: #1a1a1a;
+  color: var(--text-primary);
   letter-spacing: -1px;
   animation: slideUp 1s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
   opacity: 0;
@@ -224,7 +225,7 @@ export default {
 .slogan-bottom {
   font-size: 3rem;
   font-weight: 900;
-  color: #1a1a1a;
+  color: var(--text-primary);
   letter-spacing: -2px;
   line-height: 1.2;
   animation: slideUp 1s cubic-bezier(0.165, 0.84, 0.44, 1) 0.3s forwards;
@@ -233,7 +234,7 @@ export default {
 }
 
 .highlight {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -263,10 +264,11 @@ export default {
 }
 
 .blog-card {
-  background: white;
+  background: var(--card-bg);
   border-radius: 20px;
   padding: 2.5rem;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 5px 20px var(--card-shadow);
+  border: 1px solid var(--card-border);
   transition: all 0.3s ease;
 }
 
@@ -279,7 +281,7 @@ export default {
 .blog-header-section {
   margin-bottom: 2.5rem;
   padding-bottom: 2rem;
-  border-bottom: 2px solid #e9ecef;
+  border-bottom: 2px solid var(--card-border);
 }
 
 .blog-meta-top {
@@ -291,7 +293,7 @@ export default {
 
 .blog-category {
   background: rgba(102, 126, 234, 0.1);
-  color: #667eea;
+  color: var(--accent-primary);
   padding: 4px 14px;
   border-radius: 100px;
   font-size: 0.82rem;
@@ -302,13 +304,13 @@ export default {
 
 .blog-date {
   font-size: 0.9rem;
-  color: #999;
+  color: var(--text-muted);
   font-weight: 500;
 }
 
 .blog-title {
   font-size: 2rem;
-  color: #1a1a1a;
+  color: var(--text-primary);
   font-weight: 800;
   letter-spacing: -0.5px;
   line-height: 1.25;
@@ -317,9 +319,9 @@ export default {
 
 .blog-intro {
   font-size: 1.15rem;
-  color: #555;
+  color: var(--text-secondary);
   line-height: 1.8;
-  border-left: 4px solid #667eea;
+  border-left: 4px solid var(--accent-primary);
   padding-left: 1.2rem;
   margin: 0;
 }
@@ -331,7 +333,7 @@ export default {
 
 .section-heading {
   font-size: 1.3rem;
-  color: #333;
+  color: var(--text-primary);
   font-weight: 700;
   margin-bottom: 1rem;
 }
@@ -339,7 +341,7 @@ export default {
 .content-text {
   font-size: 1.05rem;
   line-height: 1.8;
-  color: #555;
+  color: var(--text-secondary);
   margin-bottom: 0.8rem;
 }
 
@@ -348,7 +350,7 @@ export default {
 }
 
 .inline-link {
-  color: #667eea;
+  color: var(--accent-primary);
   font-weight: 600;
   text-decoration: none;
   border-bottom: 2px solid rgba(102, 126, 234, 0.3);
@@ -356,16 +358,16 @@ export default {
 }
 
 .inline-link:hover {
-  border-color: #667eea;
+  border-color: var(--accent-primary);
 }
 
 /* ── CASE STUDY ───────────────────────────── */
 .case-study-section {
-  background: #f8f9fa;
+  background: var(--bg-secondary);
   border-radius: 14px;
   padding: 2rem;
   margin: 2rem 0;
-  border-left: 4px solid #667eea;
+  border-left: 4px solid var(--accent-primary);
 }
 
 .case-study-header {
@@ -373,13 +375,13 @@ export default {
   align-items: center;
   gap: 10px;
   margin-bottom: 1rem;
-  color: #667eea;
+  color: var(--accent-primary);
 }
 
 .case-study-header h3 {
   font-size: 1.2rem;
   font-weight: 700;
-  color: #333;
+  color: var(--text-primary);
   margin: 0;
 }
 
@@ -387,7 +389,7 @@ export default {
 .pillars-section {
   margin: 2.5rem 0;
   padding-top: 2rem;
-  border-top: 2px solid #e9ecef;
+  border-top: 2px solid var(--card-border);
 }
 
 .pillars-list {
@@ -398,7 +400,7 @@ export default {
 }
 
 .pillar-item {
-  background: #f8f9fa;
+  background: var(--bg-secondary);
   border-radius: 14px;
   padding: 2rem;
   transition: all 0.3s ease;
@@ -422,7 +424,7 @@ export default {
 
 .pillar-title {
   font-size: 1.15rem;
-  color: #1a1a1a;
+  color: var(--text-primary);
   font-weight: 700;
 }
 
@@ -430,7 +432,7 @@ export default {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  border-left: 4px solid #667eea;
+  border-left: 4px solid var(--accent-primary);
   padding-left: 1.5rem;
 }
 
@@ -441,7 +443,7 @@ export default {
 }
 
 .point-icon {
-  color: #667eea;
+  color: var(--accent-primary);
   margin-top: 3px;
   flex-shrink: 0;
 }
@@ -449,7 +451,7 @@ export default {
 .point-text {
   font-size: 1rem;
   line-height: 1.7;
-  color: #555;
+  color: var(--text-secondary);
   margin: 0;
 }
 
@@ -457,7 +459,7 @@ export default {
 .takeaway-section {
   margin: 2.5rem 0 0;
   padding-top: 2rem;
-  border-top: 2px solid #e9ecef;
+  border-top: 2px solid var(--card-border);
 }
 
 .takeaway-header {
@@ -465,19 +467,19 @@ export default {
   align-items: center;
   gap: 10px;
   margin-bottom: 1rem;
-  color: #667eea;
+  color: var(--accent-primary);
 }
 
 .takeaway-header h3 {
   font-size: 1.3rem;
   font-weight: 700;
-  color: #333;
+  color: var(--text-primary);
   margin: 0;
 }
 
 .takeaway-card {
   position: relative;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
   border-radius: 18px;
   padding: 2.5rem 2.5rem 2rem;
   overflow: hidden;
@@ -511,7 +513,7 @@ export default {
   align-items: center;
   margin-top: 2.5rem;
   padding-top: 2rem;
-  border-top: 2px solid #e9ecef;
+  border-top: 2px solid var(--card-border);
 }
 
 .author-block {
@@ -524,7 +526,7 @@ export default {
   width: 48px;
   height: 48px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
   color: white;
   font-weight: 800;
   font-size: 1.1rem;
@@ -535,21 +537,21 @@ export default {
 
 .author-label {
   font-size: 0.8rem;
-  color: #999;
+  color: var(--text-muted);
   margin: 0 0 2px;
 }
 
 .author-name {
   font-size: 0.95rem;
-  color: #333;
+  color: var(--text-primary);
 }
 
 .contact-cta {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: #1a1a1a;
-  color: white;
+  background: var(--text-primary);
+  color: var(--bg-primary);
   padding: 12px 24px;
   border-radius: 100px;
   text-decoration: none;
@@ -568,9 +570,10 @@ export default {
   text-align: center;
   margin-top: 60px;
   padding: 50px 30px;
-  background: white;
+  background: var(--card-bg);
   border-radius: 20px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 5px 20px var(--card-shadow);
+  border: 1px solid var(--card-border);
 }
 
 .more-coming-icon {
@@ -580,14 +583,14 @@ export default {
 
 .more-coming h3 {
   font-size: 1.3rem;
-  color: #1a1a1a;
+  color: var(--text-primary);
   font-weight: 700;
   margin-bottom: 10px;
 }
 
 .more-coming p {
   font-size: 1rem;
-  color: #888;
+  color: var(--text-muted);
 }
 
 /* ── RESPONSIVE ───────────────────────────── */

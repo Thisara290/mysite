@@ -122,7 +122,7 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: white; 
+  background: var(--bg-primary); 
   position: relative;
   text-align: center;
   overflow: hidden;
@@ -135,7 +135,8 @@ export default {
   left: -50%;
   width: 200%;
   height: 200%;
-  background: radial-gradient(circle, rgba(102, 126, 234, 0.05) 0%, rgba(255,255,255,0) 70%);
+  background: radial-gradient(circle, var(--accent-primary) 0%, transparent 70%);
+  opacity: 0.05;
   animation: rotate 20s linear infinite;
   z-index: 0;
 }
@@ -159,7 +160,7 @@ export default {
 .slogan-top {
   font-size: 3rem;
   font-weight: 800;
-  color: #1a1a1a;
+  color: var(--text-primary);
   letter-spacing: -1px;
   animation: slideUp 1s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
   opacity: 0;
@@ -169,7 +170,7 @@ export default {
 .slogan-bottom {
   font-size: 4rem;
   font-weight: 900;
-  color: #1a1a1a;
+  color: var(--text-primary);
   letter-spacing: -2px;
   line-height: 1.1;
   animation: slideUp 1s cubic-bezier(0.165, 0.84, 0.44, 1) 0.3s forwards;
@@ -178,7 +179,7 @@ export default {
 }
 
 .highlight {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -196,7 +197,7 @@ export default {
 /* Posh Profile Section */
 .posh-profile {
   padding: 120px 0;
-  background: #fafafa;
+  background: var(--bg-secondary);
 }
 
 .posh-container {
@@ -216,7 +217,7 @@ export default {
   position: absolute;
   width: 450px;
   height: 450px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
   border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
   animation: morph 8s ease-in-out infinite alternate;
   z-index: 0;
@@ -235,7 +236,7 @@ export default {
   border-radius: 20px;
   position: relative;
   z-index: 1;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+  box-shadow: 0 20px 40px var(--card-shadow);
   transition: transform 0.4s ease;
 }
 
@@ -247,7 +248,7 @@ export default {
   position: absolute;
   bottom: 50px;
   right: -10px;
-  background: rgba(255, 255, 255, 0.9);
+  background: var(--glass-badge-bg);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   padding: 15px 25px;
@@ -272,7 +273,7 @@ export default {
 
 .badge-text {
   font-weight: 700;
-  color: #1a1a1a;
+  color: var(--text-primary);
   letter-spacing: -0.5px;
 }
 
@@ -284,7 +285,7 @@ export default {
   display: inline-block;
   padding: 8px 16px;
   background: rgba(102, 126, 234, 0.1);
-  color: #667eea;
+  color: var(--accent-primary);
   border-radius: 30px;
   font-weight: 700;
   font-size: 0.9rem;
@@ -295,7 +296,7 @@ export default {
 .posh-name {
   font-size: 3.5rem;
   font-weight: 800;
-  color: #1a1a1a;
+  color: var(--text-primary);
   line-height: 1.1;
   margin-bottom: 15px;
   letter-spacing: -1px;
@@ -304,14 +305,14 @@ export default {
 .posh-role {
   font-size: 1.6rem;
   font-weight: 600;
-  color: #764ba2;
+  color: var(--accent-secondary);
   margin-bottom: 30px;
 }
 
 .posh-desc {
   font-size: 1.15rem;
   line-height: 1.8;
-  color: #666;
+  color: var(--text-secondary);
   margin-bottom: 40px;
   max-width: 90%;
 }
@@ -334,39 +335,39 @@ export default {
 }
 
 .posh-btn.primary {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
   color: white;
   box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
 }
 
 .posh-btn.primary:hover {
   transform: translateY(-4px);
-  box-shadow: 0 15px 35px rgba(102, 126, 234, 0.4);
+  box-shadow: 0 15px 35px rgba(102, 126, 234, 0.2);
 }
 
 .posh-btn.outline {
   background: transparent;
-  color: #1a1a1a;
+  color: var(--text-primary);
   border: 2px solid #e2e8f0;
 }
 
 .posh-btn.outline:hover {
-  border-color: #667eea;
-  color: #667eea;
+  border-color: var(--accent-primary);
+  color: var(--accent-primary);
   transform: translateY(-4px);
-  box-shadow: 0 10px 25px rgba(102, 126, 234, 0.1);
+  box-shadow: 0 10px 25px var(--card-shadow);
 }
 
 .services {
   padding: 120px 0;
-  background: #ffffff;
+  background: var(--bg-primary);
   position: relative;
 }
 
 .section-title {
   font-size: 3rem;
   margin-bottom: 1rem;
-  color: #1a1a1a;
+  color: var(--text-primary);
   text-align: center;
   font-weight: 800;
   letter-spacing: -1px;
@@ -374,7 +375,7 @@ export default {
 
 .section-subtitle {
   font-size: 1.2rem;
-  color: #666;
+  color: var(--text-secondary);
   text-align: center;
   margin-bottom: 4rem;
   max-width: 600px;
@@ -390,7 +391,7 @@ export default {
 }
 
 .modern-card {
-  background: #ffffff;
+  background: var(--bg-primary);
   padding: 2.5rem;
   border-radius: 20px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
@@ -405,8 +406,8 @@ export default {
 
 .modern-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(102, 126, 234, 0.12);
-  border-color: rgba(102, 126, 234, 0.3);
+  box-shadow: 0 20px 40px var(--card-shadow);
+  border-color: var(--accent-primary);
 }
 
 .card-glow {
@@ -423,12 +424,13 @@ export default {
 
 .modern-card:hover .card-glow {
   transform: scale(2);
+  opacity: 0.2;
 }
 
 .service-icon-wrapper {
   width: 60px;
   height: 60px;
-  background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+  background: rgba(102, 126, 234, 0.1);
   border-radius: 15px;
   display: flex;
   align-items: center;
@@ -438,7 +440,7 @@ export default {
 }
 
 .modern-card:hover .service-icon-wrapper {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
 }
 
 .service-icon {
@@ -455,7 +457,7 @@ export default {
 .service-content h3 {
   font-size: 1.3rem;
   margin-bottom: 1rem;
-  color: #1a1a1a;
+  color: var(--text-primary);
   font-weight: 700;
   letter-spacing: -0.5px;
 }
@@ -463,14 +465,14 @@ export default {
 .service-content p {
   font-size: 1rem;
   line-height: 1.7;
-  color: #666;
+  color: var(--text-secondary);
   margin: 0;
 }
 
 
 .cta {
   padding: 100px 0;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
   color: white;
   text-align: center;
 }
@@ -492,8 +494,8 @@ export default {
 }
 
 .btn-cta {
-  background: white;
-  color: #667eea;
+  background: var(--bg-primary);
+  color: var(--accent-primary);
   padding: 16px 40px;
   font-size: 1.1rem;
   border-radius: 30px;

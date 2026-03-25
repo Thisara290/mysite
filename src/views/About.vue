@@ -135,7 +135,7 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: white; 
+  background: var(--bg-primary); 
   position: relative;
   text-align: center;
   overflow: hidden;
@@ -148,7 +148,8 @@ export default {
   left: -50%;
   width: 200%;
   height: 200%;
-  background: radial-gradient(circle, rgba(102, 126, 234, 0.05) 0%, rgba(255,255,255,0) 70%);
+  background: radial-gradient(circle, var(--accent-primary) 0%, transparent 70%);
+  opacity: 0.05;
   animation: rotate 20s linear infinite;
   z-index: 0;
 }
@@ -174,7 +175,7 @@ export default {
 .slogan-top {
   font-size: 2.5rem;
   font-weight: 800;
-  color: #1a1a1a;
+  color: var(--text-primary);
   letter-spacing: -1px;
   animation: slideUp 1s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
   opacity: 0;
@@ -184,7 +185,7 @@ export default {
 .slogan-bottom {
   font-size: 3rem;
   font-weight: 900;
-  color: #1a1a1a;
+  color: var(--text-primary);
   letter-spacing: -2px;
   line-height: 1.2;
   animation: slideUp 1s cubic-bezier(0.165, 0.84, 0.44, 1) 0.3s forwards;
@@ -193,7 +194,7 @@ export default {
 }
 
 .highlight {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -210,7 +211,7 @@ export default {
 /* Posh Profile Section */
 .posh-profile {
   padding: 120px 0;
-  background: #fafafa;
+  background: var(--bg-secondary);
 }
 
 .container {
@@ -255,7 +256,7 @@ export default {
   border-radius: 20px;
   position: relative;
   z-index: 1;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+  box-shadow: 0 20px 40px var(--card-shadow);
   transition: transform 0.4s ease;
 }
 
@@ -267,7 +268,7 @@ export default {
   position: absolute;
   bottom: 50px;
   right: -10px;
-  background: rgba(255, 255, 255, 0.9);
+  background: var(--glass-badge-bg);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   padding: 15px 25px;
@@ -275,8 +276,8 @@ export default {
   display: flex;
   align-items: center;
   gap: 12px;
-  box-shadow: 0 15px 35px rgba(0,0,0,0.1);
-  border: 1px solid rgba(255,255,255,0.7);
+  box-shadow: 0 15px 35px var(--card-shadow);
+  border: 1px solid var(--nav-border);
   z-index: 2;
   animation: float 4s ease-in-out infinite;
 }
@@ -292,7 +293,7 @@ export default {
 
 .badge-text {
   font-weight: 700;
-  color: #1a1a1a;
+  color: var(--text-primary);
   letter-spacing: -0.5px;
 }
 
@@ -304,7 +305,7 @@ export default {
   display: inline-block;
   padding: 8px 16px;
   background: rgba(102, 126, 234, 0.1);
-  color: #667eea;
+  color: var(--accent-primary);
   border-radius: 30px;
   font-weight: 700;
   font-size: 0.9rem;
@@ -315,7 +316,7 @@ export default {
 .posh-name {
   font-size: 3rem;
   font-weight: 800;
-  color: #1a1a1a;
+  color: var(--text-primary);
   line-height: 1.1;
   margin-bottom: 25px;
   letter-spacing: -1px;
@@ -324,7 +325,7 @@ export default {
 .posh-desc {
   font-size: 1.1rem;
   line-height: 1.8;
-  color: #666;
+  color: var(--text-secondary);
   margin-bottom: 20px;
   max-width: 95%;
 }
@@ -355,20 +356,20 @@ export default {
 
 .posh-btn.primary:hover {
   transform: translateY(-4px);
-  box-shadow: 0 15px 35px rgba(102, 126, 234, 0.4);
+  box-shadow: 0 15px 35px rgba(102, 126, 234, 0.2);
 }
 
 /* Services / Skills Section */
 .services {
   padding: 120px 0;
-  background: #ffffff;
+  background: var(--bg-primary);
   position: relative;
 }
 
 .section-title {
   font-size: 3rem;
   margin-bottom: 1rem;
-  color: #1a1a1a;
+  color: var(--text-primary);
   text-align: center;
   font-weight: 800;
   letter-spacing: -1px;
@@ -376,7 +377,7 @@ export default {
 
 .section-subtitle {
   font-size: 1.2rem;
-  color: #666;
+  color: var(--text-secondary);
   text-align: center;
   margin-bottom: 4rem;
 }
@@ -389,7 +390,7 @@ export default {
 }
 
 .modern-card {
-  background: #ffffff;
+  background: var(--bg-primary);
   padding: 2.5rem;
   border-radius: 20px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
@@ -404,8 +405,8 @@ export default {
 
 .modern-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(102, 126, 234, 0.12);
-  border-color: rgba(102, 126, 234, 0.3);
+  box-shadow: 0 20px 40px var(--card-shadow);
+  border-color: var(--accent-primary);
 }
 
 .card-glow {
@@ -454,7 +455,7 @@ export default {
 .service-content h3 {
   font-size: 1.4rem;
   margin-bottom: 1.2rem;
-  color: #1a1a1a;
+  color: var(--text-primary);
   font-weight: 700;
   letter-spacing: -0.5px;
 }
@@ -467,7 +468,7 @@ export default {
 
 .service-content li {
   font-size: 1rem;
-  color: #666;
+  color: var(--text-secondary);
   margin-bottom: 0.8rem;
   display: flex;
   align-items: center;

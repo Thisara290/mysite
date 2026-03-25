@@ -140,7 +140,7 @@ export default {
 .contact {
   min-height: 100vh;
   padding: 120px 0 100px;
-  background-color: #fafafa;
+  background-color: var(--bg-primary);
   position: relative;
   overflow: hidden;
   z-index: 1;
@@ -171,7 +171,7 @@ export default {
   right: -5%;
   width: 500px;
   height: 500px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
 }
 
 .circle-2 {
@@ -179,7 +179,8 @@ export default {
   left: -10%;
   width: 600px;
   height: 600px;
-  background: radial-gradient(circle, rgba(102, 126, 234, 0.3) 0%, rgba(255,255,255,0) 70%);
+  background: radial-gradient(circle, var(--accent-primary) 0%, transparent 70%);
+  opacity: 0.1;
   animation-duration: 25s;
 }
 
@@ -204,7 +205,7 @@ export default {
 
 .animate-title {
   font-size: 3.5rem;
-  color: #1a1a1a;
+  color: var(--text-primary);
   margin-bottom: 1rem;
   font-weight: 800;
   letter-spacing: -1px;
@@ -215,7 +216,7 @@ export default {
 
 .subtitle {
   font-size: 1.4rem;
-  color: #666;
+  color: var(--text-secondary);
   font-weight: 500;
 }
 
@@ -226,7 +227,7 @@ export default {
 }
 
 .dot {
-  color: #667eea;
+  color: var(--accent-primary);
   font-weight: 800;
 }
 
@@ -240,14 +241,14 @@ export default {
 
 /* Left: Posh Profile Card */
 .contact-profile-card {
-  background: rgba(255, 255, 255, 0.8);
+  background: var(--nav-bg);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border-radius: 25px;
   padding: 40px;
   text-align: center;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 20px 50px var(--card-shadow);
+  border: 1px solid var(--nav-border);
   position: relative;
   overflow: hidden;
   display: flex;
@@ -261,7 +262,8 @@ export default {
   left: 0;
   width: 100%;
   height: 150px;
-  background: linear-gradient(135deg, rgba(102, 126, 234, 0.15) 0%, rgba(118, 75, 162, 0) 100%);
+  background: linear-gradient(135deg, var(--accent-primary) 0%, transparent 100%);
+  opacity: 0.1;
   z-index: 0;
 }
 
@@ -278,7 +280,7 @@ export default {
   height: 100%;
   object-fit: cover;
   border-radius: 50%;
-  border: 4px solid white;
+  border: 4px solid var(--bg-primary);
   box-shadow: 0 15px 35px rgba(0,0,0,0.1);
   transition: transform 0.4s ease;
 }
@@ -296,7 +298,7 @@ export default {
   border-radius: 30px;
   font-size: 0.85rem;
   font-weight: 700;
-  color: #1a1a1a;
+  color: var(--text-primary);
   box-shadow: 0 10px 25px rgba(0,0,0,0.1);
   display: flex;
   align-items: center;
@@ -321,7 +323,7 @@ export default {
 
 .contact-name {
   font-size: 2.2rem;
-  color: #1a1a1a;
+  color: var(--text-primary);
   font-weight: 800;
   letter-spacing: -0.5px;
   margin-bottom: 5px;
@@ -330,7 +332,7 @@ export default {
 }
 
 .contact-role {
-  color: #667eea;
+  color: var(--accent-primary);
   font-weight: 700;
   font-size: 1.1rem;
   margin-bottom: 25px;
@@ -339,7 +341,7 @@ export default {
 }
 
 .contact-bio {
-  color: #666;
+  color: var(--text-secondary);
   font-size: 1.05rem;
   line-height: 1.8;
   margin-bottom: 35px;
@@ -358,19 +360,19 @@ export default {
 .posh-social-link {
   width: 50px;
   height: 50px;
-  background: white;
+  background: var(--bg-secondary);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #4a4a4a;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  color: var(--text-secondary);
+  box-shadow: 0 5px 15px var(--card-shadow);
   transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
-  border: 1px solid #eaeaea;
+  border: 1px solid var(--card-border);
 }
 
 .posh-social-link:hover {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
   color: white;
   transform: translateY(-5px);
   box-shadow: 0 15px 25px rgba(102, 126, 234, 0.2);
@@ -387,7 +389,7 @@ export default {
 
 .group-title {
   font-size: 1.6rem;
-  color: #1a1a1a;
+  color: var(--text-primary);
   font-weight: 700;
   margin-bottom: 25px;
   letter-spacing: -0.5px;
@@ -403,11 +405,11 @@ export default {
   display: flex;
   align-items: center;
   padding: 25px;
-  background: white;
+  background: var(--card-bg);
   border-radius: 20px;
   text-decoration: none;
-  border: 1px solid rgba(0,0,0,0.03);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+  border: 1px solid var(--card-border);
+  box-shadow: 0 10px 30px var(--card-shadow);
   transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
@@ -446,13 +448,13 @@ export default {
 
 .method-value {
   font-size: 1.25rem;
-  color: #1a1a1a;
+  color: var(--text-primary);
   font-weight: 700;
   transition: color 0.3s ease;
 }
 
 .hover-glow:hover .method-value {
-  color: #667eea;
+  color: var(--accent-primary);
 }
 
 /* Expertise Grid inside Right Column */
@@ -463,11 +465,11 @@ export default {
 }
 
 .expertise-glass-card {
-  background: white;
+  background: var(--card-bg);
   padding: 30px;
   border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.03);
-  border: 1px solid rgba(0,0,0,0.03);
+  box-shadow: 0 10px 30px var(--card-shadow);
+  border: 1px solid var(--card-border);
   transition: all 0.4s ease;
 }
 
@@ -486,7 +488,7 @@ export default {
 .exp-icon-box {
   width: 45px;
   height: 45px;
-  background: #f8f9fa;
+  background: var(--bg-secondary);
   border-radius: 12px;
   display: flex;
   align-items: center;
@@ -496,7 +498,7 @@ export default {
 
 .exp-header h4 {
   font-size: 1.25rem;
-  color: #1a1a1a;
+  color: var(--text-primary);
   font-weight: 700;
 }
 
@@ -510,7 +512,7 @@ export default {
   position: relative;
   padding-left: 25px;
   margin-bottom: 12px;
-  color: #555;
+  color: var(--text-secondary);
   font-size: 1rem;
   line-height: 1.5;
 }
@@ -520,7 +522,7 @@ export default {
   position: absolute;
   left: 0;
   top: 0;
-  color: #667eea;
+  color: var(--accent-primary);
   font-weight: 800;
   opacity: 0.6;
 }

@@ -41,10 +41,11 @@ export default {
 
 <style scoped>
 .footer {
-  background: #333;
-  color: white;
+  background: var(--bg-secondary);
+  color: var(--text-secondary);
   padding: 40px 0;
   margin-top: auto;
+  border-top: 1px solid var(--card-border);
 }
 
 .footer-container {
@@ -67,7 +68,7 @@ export default {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  color: white;
+  color: var(--text-secondary);
   text-decoration: none;
   transition: all 0.3s ease;
   border-radius: 50%;
@@ -81,7 +82,7 @@ export default {
 }
 
 .social-link:hover svg {
-  color: #667eea;
+  color: var(--accent-primary);
 }
 
 .whatsapp-link:hover svg {
