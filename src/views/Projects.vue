@@ -594,7 +594,7 @@ export default {
 }
 
 .tech-detail-item:hover {
-  background: #f0f2f5;
+  background: var(--hover-bg);
   transform: translateX(5px);
 }
 

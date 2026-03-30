@@ -13,6 +13,7 @@
   --card-shadow: rgba(0, 0, 0, 0.05);
   --card-border: rgba(0, 0, 0, 0.05);
   --glass-badge-bg: rgba(255, 255, 255, 0.9);
+  --hover-bg: #f0f2f5;
   
   font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.6;
@@ -42,6 +43,7 @@
   --card-shadow: rgba(0, 0, 0, 0.2);
   --card-border: rgba(255, 255, 255, 0.1);
   --glass-badge-bg: rgba(30, 41, 59, 0.8);
+  --hover-bg: rgba(255, 255, 255, 0.05);
 }
 
 
