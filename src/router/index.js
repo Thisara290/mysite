@@ -44,4 +44,12 @@ const router = createRouter({
   routes
 })
 
+router.afterEach((to) => {
+  if (typeof window.gtag === 'function') {
+    window.gtag('config', 'G-6K32310PC7', {
+      page_path: to.fullPath,
+    });
+  }
+});
+
 export default router
