@@ -99,5 +99,25 @@ export const blogs = [
       { type: 'text', value: 'Make decisions based on growth—not comfort.' },
       { type: 'text', value: "If you have any questions, or you want ideas, or you feel any discomforts about your business—let's discuss." }
     ]
+  },
+  {
+    id: 3,
+    slug: 'before-you-pitch-do-this-first',
+    title: 'Before You Pitch, Do This First',
+    category: 'Sales & Business Strategy',
+    date: 'April 19, 2026',
+    excerpt: 'Pitching a service isn\'t just about talking—it\'s about listening and showing ROI. Here is the process you should follow before you ever say "if."',
+    intro: 'Before you pitch a website or social media marketing service to a business, follow these steps. Most people jump straight into the solution, but the best approach starts with understanding and ends with confidence.',
+    sections: [
+      { type: 'heading', value: '1. Understand Their Problem' },
+      { type: 'text', value: 'If a client comes to you, ask them what their problem is. For example, if they have an outdated website, it’s definitely costing them customers and reducing their sales. <strong>Let them speak.</strong> Train yourself to listen more than you talk.' },
+      { type: 'text', value: 'If you’re the one approaching a client, then your job is to <strong>show them the problem.</strong> Help them see how an outdated, poorly designed website affects their business and makes them look less trustworthy or irrelevant in today’s market.' },
+      { type: 'heading', value: '2. Show Them the Numbers (ROI)' },
+      { type: 'text', value: 'Let’s say a client is making $10,000 with 5,000 visitors. Help them understand how much further their business can grow with a better solution. Make it clear how improving their website or marketing can increase <strong>conversions and revenue.</strong>' },
+      { type: 'text', value: 'Also, compare costs in a smart way. If their current website costs $5,000 but lacks features, show how your solution can deliver more value — maybe even at $4,000 — with better performance, features, and long-term benefits.' },
+      { type: 'heading', value: '3. Eliminate the Word "If"' },
+      { type: 'text', value: 'Don’t say “if you like this” or “if you’re interested.” Remove that completely. Be confident in what you’re offering. Instead of asking, lead the conversation forward.' },
+      { type: 'takeaway', value: 'Never ask for permission to help. Lead the conversation forward and say: “Let’s get started.”' }
+    ]
   }
 ]

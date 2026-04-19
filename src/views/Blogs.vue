@@ -14,7 +14,7 @@
     <!-- BLOG PREVIEW CARDS -->
     <div class="container">
       <div class="blogs-list">
-        <article class="blog-card" v-for="blog in blogs" :key="blog.id">
+        <article class="blog-card" v-for="blog in displayBlogs" :key="blog.id">
           <div class="blog-meta-top">
             <span class="blog-category">{{ blog.category }}</span>
             <span class="blog-date">{{ blog.date }}</span>
@@ -42,9 +42,9 @@ import { blogs } from '../blogData.js'
 
 export default {
   name: 'Blogs',
-  data() {
-    return {
-      blogs
+  computed: {
+    displayBlogs() {
+      return [...blogs].reverse()
     }
   }
 }

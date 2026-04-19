@@ -167,7 +167,7 @@ export default {
 .post-hero {
   background: var(--bg-primary);
   border-bottom: 1px solid var(--border-color);
-  padding: 80px 24px 60px;
+  padding: 150px 24px 60px;
   position: relative;
   overflow: hidden;
 }
