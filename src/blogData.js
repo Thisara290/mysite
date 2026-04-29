@@ -2,6 +2,7 @@ export const blogs = [
   {
     id: 1,
     slug: 'solomo-digital-marketing',
+    language: 'en',
     title: 'SoLoMo: The Smart Way to Plan a Digital Marketing Project',
     category: 'Digital Marketing Strategy',
     date: 'March 20, 2026',
@@ -59,6 +60,7 @@ export const blogs = [
   {
     id: 2,
     slug: 'people-and-business',
+    language: 'en',
     title: 'People and Business',
     category: 'Career & Business Strategy',
     date: 'March 30, 2026',
@@ -103,6 +105,7 @@ export const blogs = [
   {
     id: 3,
     slug: 'before-you-pitch-do-this-first',
+    language: 'en',
     title: 'Before You Pitch, Do This First',
     category: 'Sales & Business Strategy',
     date: 'April 19, 2026',
@@ -118,6 +121,55 @@ export const blogs = [
       { type: 'heading', value: '3. Eliminate the Word "If"' },
       { type: 'text', value: 'Don’t say “if you like this” or “if you’re interested.” Remove that completely. Be confident in what you’re offering. Instead of asking, lead the conversation forward.' },
       { type: 'takeaway', value: 'Never ask for permission to help. Lead the conversation forward and say: “Let’s get started.”' }
+    ]
+  },
+  {
+    id: 4,
+    slug: 'bisnes-ekak-karanna-hithenawa',
+    language: 'si',
+    title: 'Business එකක් කරන්න හිතෙනවා හැබැයි තවම පටන් ගත්තේ නැද්ද?',
+    category: 'Business',
+    date: 'April 29, 2026',
+    excerpt: 'බිස්නස් එකක් කරන්න අදහසක් තියෙනව. හැබැයි හිතට එන ප්‍රශ්න නිසා තාම පටන් ගත්තේ නෑ...',
+    intro: 'බිස්නස් එකක් කරන්න අදහසක් තියෙනව. හැබැයි හිතට එන ප්‍රශ්න නිසා තාම පටන් ගත්තේ නෑ',
+    sections: [
+      {
+        type: 'list',
+        items: [
+          'මේව විකිණෙයිද?',
+          'අනිත් අය අපිට වඩා අඩුවට දායිද?',
+          'මට තාම දැනුම මදිද?'
+        ]
+      },
+      { type: 'text', value: 'අන්න ඒවගේ ප්‍රශ්න නිසාම අපි වැඩේ කල් දානව.' },
+      { type: 'text', value: 'පුංචි කාලේ අපි foot bike එකක් ගන්න කොච්චර ආසාවෙන් හිටියද කියල මතකද?<br><br>දැන් අපි ලොකුයි. සල්ලිත් තියෙනව. බයිසිකල් එකට දහයක් ගන්න පුළුවන්.' },
+      { type: 'text', value: 'හැබැයි… ඒ foot bike එක ගත්තම එදා තිබ්බ හැගීම ? එක අද ගත්තොත් එනවද?<br><br>ඒකම තමයි ව්‍යාපාරයකටත් වෙන්නේ.' },
+      { type: 'text', value: 'ඔයාට අද අදහසක් තියෙනව. හයිය තියෙනව.<br><br>හැබැයි ඔයා හිතනව' },
+      {
+        type: 'list',
+        items: [
+          'තව ටිකක් research කරලා පටන් ගන්නම්',
+          'තව ටිකක් හොයල ඉගන ගෙනම enter වෙන්න ඕන',
+          'මෙන්න මේ ටික මේ ටිකත් දැන ගන්න ඕන.'
+        ]
+      },
+      { type: 'text', value: 'ඒත් ඇත්ත කියනවනම්<br><br>Perfect වෙලා පටන් ගන්න කොට එතන බොහෝවිට chance එකක් නෑ.' },
+      { type: 'text', value: 'ඔයා research කරනකොට, අනිත් අය පටන් අරන්<br>ඔයා plan කරනකොට, තව කෙනෙක් sell කරනව.<br><br>ඒක දකිනකොට දැනෙන්නේ පසු තැවීමක් විතරයි.' },
+      { type: 'text', value: 'ඊට පස්සේ facebook ads නෙවෙයි google ads run කරත් එච්චරයි.' },
+      { type: 'text', value: 'මෙතන තියෙන වැදගත්ම point එක තමයි — <strong>ආරම්භය පමා නොකිරීම.</strong>' },
+      { type: 'text', value: 'ලොකුවට plan කර කර ඉන්න එක නෙවෙයි ලොකුවට plan කරන්නම ඕන.<br>Market research කරන්නත් ඕන. ඉගෙනගන්නත් ඕන.<br><br>හැබැයි ඒක පටන් ගන්න බාධකයක් කරන්න එපා. මොකද අනිවාරෙන්ම පටන් ගන්නත් ඕන.' },
+      {
+        type: 'list',
+        items: [
+          'ලොකු investment දාන්න කලින්',
+          'job එකෙන් අයින් වෙන්න කලින්',
+          'life එක full risk එකට දාන්න කලින්'
+        ]
+      },
+      { type: 'text', value: 'අනිවාරෙන්ම දේවල්වල හොදට අග මුල හොයන්න.<br>හැබැයි පොඩියට හරි පටන් ගන්න ඒකේ නිරත වෙන්න.' },
+      { type: 'text', value: 'මොකද නැත්තම් වෙන්නේ<br>ඔයාට පස්සෙන් පහු වෙලා දුක් වෙන්න වෙන එක.' },
+      { type: 'text', value: 'ඒ අසාර්ථක උන එකට නෙවෙයි — <strong>පටන් ගන්නේ නැතුව හිටපු එකට.</strong>' },
+      { type: 'text', value: 'ඔයාගේ හිතේ තියන ව්‍යාපාරය සාර්ථක වෙන්න කියල හදවතින්ම ප්‍රාර්ථනා කරනව ❤️<br><br>ඕනම ව්‍යාපාරයක් සම්බන්ද digital marketing support එකකට කතා කරන්න ❤️' }
     ]
   }
 ]

@@ -14,6 +14,9 @@
           <div class="post-meta-top">
             <span class="post-category">{{ blog.category }}</span>
             <span class="post-date">{{ blog.date }}</span>
+            <span class="post-lang-badge" :class="blog.language || 'en'">
+              {{ (blog.language === 'si') ? 'සිංහල' : 'English' }}
+            </span>
           </div>
           <h1 class="post-title">{{ blog.title }}</h1>
           <p class="post-intro" v-html="blog.intro"></p>
@@ -22,7 +25,7 @@
 
       <!-- Article Body -->
       <div class="post-container">
-        <article class="post-article">
+        <article class="post-article" :class="{ 'si-content': blog.language === 'si' }">
 
           <template v-for="(section, index) in blog.sections" :key="index">
 
@@ -214,6 +217,28 @@ export default {
   color: var(--text-secondary);
 }
 
+.post-lang-badge {
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-color);
+  color: var(--text-muted);
+}
+
+.post-lang-badge.si {
+  border-color: #ffbe0b;
+  color: #ffbe0b;
+}
+
+.post-lang-badge.en {
+  border-color: #3a86ff;
+  color: #3a86ff;
+}
+
 .post-title {
   font-size: clamp(2rem, 5vw, 3.2rem);
   font-weight: 800;
@@ -291,6 +316,34 @@ export default {
   left: 0;
   color: var(--accent-primary);
   font-weight: 700;
+}
+
+/* ── SINHALA CONTENT STYLING ──────────────── */
+.si-content {
+  font-family: 'Noto Sans Sinhala', 'Abhaya Libre', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.si-content .content-text {
+  font-size: 1.15rem;
+  line-height: 2;
+  letter-spacing: 0.02em;
+}
+
+.si-content .content-list li {
+  font-size: 1.1rem;
+  line-height: 1.9;
+  margin-bottom: 8px;
+}
+
+.si-content .content-list li::before {
+  content: '•';
+  font-size: 1.5rem;
+  top: -4px;
+}
+
+.si-content .post-title {
+  font-family: 'Noto Sans Sinhala', 'Abhaya Libre', sans-serif;
+  line-height: 1.3;
 }
 
 /* ── CASE STUDY ─────────────────────────── */

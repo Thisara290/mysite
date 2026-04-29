@@ -13,6 +13,27 @@
 
     <!-- BLOG PREVIEW CARDS -->
     <div class="container">
+
+      <!-- LANGUAGE TOGGLE -->
+      <div class="lang-toggle-wrapper">
+        <div class="lang-toggle">
+          <button
+            class="lang-btn"
+            :class="{ active: activeLang === 'en' }"
+            @click="activeLang = 'en'"
+          >
+            English
+          </button>
+          <button
+            class="lang-btn"
+            :class="{ active: activeLang === 'si' }"
+            @click="activeLang = 'si'"
+          >
+            සිංහල
+          </button>
+        </div>
+      </div>
+
       <div class="blogs-list">
         <article class="blog-card" v-for="blog in displayBlogs" :key="blog.id">
           <div class="blog-meta-top">
@@ -42,9 +63,16 @@ import { blogs } from '../blogData.js'
 
 export default {
   name: 'Blogs',
+  data() {
+    return {
+      activeLang: 'en'
+    }
+  },
   computed: {
     displayBlogs() {
-      return [...blogs].reverse()
+      return [...blogs]
+        .filter(b => (b.language || 'en') === this.activeLang)
+        .reverse()
     }
   }
 }
@@ -266,11 +294,53 @@ export default {
   text-decoration: underline;
 }
 
+/* ── LANGUAGE TOGGLE ─────────────────────── */
+.lang-toggle-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2.5rem;
+}
+
+.lang-toggle {
+  display: inline-flex;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 100px;
+  padding: 5px;
+  gap: 4px;
+  box-shadow: 0 4px 16px var(--card-shadow);
+}
+
+.lang-btn {
+  padding: 10px 24px;
+  border-radius: 100px;
+  border: none;
+  background: transparent;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  letter-spacing: 0.02em;
+}
+
+.lang-btn.active {
+  background: var(--accent-primary);
+  color: #fff;
+  box-shadow: 0 4px 14px rgba(102, 126, 234, 0.35);
+}
+
+.lang-btn:not(.active):hover {
+  background: rgba(102, 126, 234, 0.08);
+  color: var(--accent-primary);
+}
+
 /* ── RESPONSIVE ───────────────────────────── */
 @media (max-width: 768px) {
   .slogan-top { font-size: 1.5rem; }
   .slogan-bottom { font-size: 1.8rem; letter-spacing: -1px; }
   .blog-card { padding: 1.5rem; }
   .blog-title { font-size: 1.4rem; }
+  .lang-btn { padding: 8px 16px; font-size: 0.8rem; }
 }
 </style>
