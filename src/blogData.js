@@ -171,5 +171,58 @@ export const blogs = [
       { type: 'text', value: 'ඒ අසාර්ථක උන එකට නෙවෙයි — <strong>පටන් ගන්නේ නැතුව හිටපු එකට.</strong>' },
       { type: 'text', value: 'ඔයාගේ හිතේ තියන ව්‍යාපාරය සාර්ථක වෙන්න කියල හදවතින්ම ප්‍රාර්ථනා කරනව ❤️<br><br>ඕනම ව්‍යාපාරයක් සම්බන්ද digital marketing support එකකට කතා කරන්න ❤️' }
     ]
+  },
+  {
+    id: 5,
+    slug: 'vyaparayata-website-hadanna-danga-gat-yutu-da',
+    language: 'si',
+    title: 'ව්‍යාපාරයට website එකක් හදන්න දැන ගත යුතු දෑ',
+    category: 'Business',
+    date: 'May 8, 2026',
+    excerpt: 'ඔබේ ව්‍යාපාරයට web site එකක් හදන්න අදහසක් තියනව නම් ඒ ක්‍රියාදාමය සම්බන්දයෙන් ඔබ දැනගත යුතු දෑ මොනවාද?',
+    intro: 'ඔබේ ව්‍යාපාරයට web site එකක් හදන්න අදහසක් තියනව නම් ඒ ක්‍රියාදාමය සම්බන්දයෙන් ඔබ දැනගත යුතු දෑ මොනවාද?',
+    sections: [
+      { type: 'text', value: 'වර්ථමාන තාක්ෂණයේ දියුණුව එක්ක ව්‍යාපාර බහුතරයක් digital කරණය වෙලා තියනව. ඒ නිසා web අඩවියක් කියන්නේ කුඩා ව්‍යාපාරයකට උනත් <strong>අත්‍යාවශ්‍යම සාධකයක්</strong>.' },
+      { type: 'text', value: 'Web site එකකින් ඔබේ ව්‍යාපාරයට ලැබෙන වාසි මීට කලින් මම පැහැදිලි කරල තියනව. ඒක නැවත කියවන්න අවශ්‍යයි නම් blog section එකේ ඒ ලිපිය බලන්න.' },
+      { type: 'heading', value: '1. Domain Name එකක්' },
+      { type: 'text', value: 'ඔයාගේ ව්‍යාපාරයට web අඩවියක් නිර්මාණය කර ගන්න ඔයාට <strong>අත්‍යාවශ්‍යම</strong> වෙන පළවෙනි දේ තමයි <strong>domain name</strong> එකක්.' },
+      { type: 'text', value: 'ඒ කියන්නේ සරලව — internet එකේ search කරාම නමක්. Domain name විදියට ගන්නේ ඔයාගේ ව්‍යාපාරයේ නම.' },
+      {
+        type: 'list',
+        value: 'උදාහරණයක් විදියට ඔයාගේ ව්‍යාපාරයේ නම <strong>Araliya Clothing</strong> නම්, domain name ගන්න පුලුවන්:',
+        items: [
+          'www.araliyaclothing.com',
+          'www.araliyaclothing.lk'
+        ]
+      },
+      { type: 'text', value: 'Domain name ගන්නේ <strong>english වලින් විතරයි</strong>.' },
+      { type: 'heading', value: 'Domain Name වර්ග' },
+      {
+        type: 'list',
+        value: 'Domain name ගන්න පුලුවන් වර්ග කීපයක්ම තියනව. මූලිකම දෙක:',
+        items: [
+          '<strong>.lk</strong> — මේකට ඔයාට අනිවාරෙන්ම BR (ලියාපදිංචි ව්‍යාපාරයක්) ඕන.',
+          '<strong>.com</strong> — .com එකක් ගන්න BR ඕන නෑ. ඕනෑම කෙනෙකුට ගන්න පුලුවන්.'
+        ]
+      },
+      { type: 'heading', value: '2. Hosting එකක්' },
+      { type: 'text', value: 'Hosting එකක් කියන්නේ <strong>internet ඇතුලේ ඔයාගේ ව්‍යාපාරයට අදාල වෙබ් අඩවිය රදවන්න ඉඩක්</strong>.' },
+      {
+        type: 'list',
+        value: 'Hosting ගන්න ක්‍රම කීපයක් තියනව:',
+        items: [
+          '<strong>වසරකට ගෙවල ගන්න</strong> — ඒ කිව්වොත් annually plan.',
+          '<strong>මාසෙන් මාසෙට</strong> — පාවිච්චිය අනුව ගෙවන් යන plan. අපි ගෙදර ලයිට් බිල්, වතුර බිල් ගෙවනව වගේ!'
+        ]
+      },
+      { type: 'heading', value: '3. Quality පින්තූර සහ වීඩීයෝ' },
+      { type: 'text', value: 'Facebook, TikTok වගේ social media වලට upload කරනව වගේ quality අඩු පින්තූර සහ වීඩීයෝ <strong>වෙබ් අඩවියක දාන එක ගැලපෙන්නේ නෑ</strong>.' },
+      { type: 'text', value: 'Web site එකකට <strong>ටිකක් quality ඉහළ</strong> content ඕන කරනව. ඒ නිසා හොඳ photos සහ videos සූදානම් කර ගන්න.' },
+      { type: 'heading', value: 'ඊළඟට ඔයාට එන ප්‍රශ්න' },
+      { type: 'text', value: 'ඉතින් ඔය <strong>domain name + hosting + quality content</strong> — ත්‍රිත්වය තියනව නම් ඔයාට පුලුවන් ඔයාගේ ව්‍යාපාරයට <strong>premium quality web අඩවියක්</strong> හදාගන්න.' },
+      { type: 'text', value: '<strong>ව්‍යාපාරයක් හැම තිස්සේම එකම විදියට තියෙන්නේ නෑ නේ, කොහොමද ඔයාට අවශ්‍ය පින්තූර සහ විස්තර web අඩවියේ update කරන්නේ? Delete කරන්නේ? Add කරන්නේ?</strong><br><br>මේව කරන එක ඉතාම පහසු දෙයක්. හැබැයි ඒකට web අඩවි හදන කෙනෙකුට කියල <strong>හරියට හදා ගන්න ඕන</strong>.' },
+      { type: 'text', value: 'ඔයාගේ ව්‍යාපාරය මූලික අදියර පහු කරල දැන් ඉස්සරහට එන ගමන් නම් — <strong>අනිවාරෙන්ම වෙබ් අඩවියක් හදාගන්න</strong> උත්සාහ කරන්න.' },
+      { type: 'text', value: 'ඕනෑම ව්‍යාපාරයක් සම්බන්ද digital marketing support එකකට කතා කරන්න ❤️' }
+    ]
   }
 ]
