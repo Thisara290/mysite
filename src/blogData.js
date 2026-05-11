@@ -224,5 +224,56 @@ export const blogs = [
       { type: 'text', value: 'ඔයාගේ ව්‍යාපාරය මූලික අදියර පහු කරල දැන් ඉස්සරහට එන ගමන් නම් — <strong>අනිවාරෙන්ම වෙබ් අඩවියක් හදාගන්න</strong> උත්සාහ කරන්න.' },
       { type: 'text', value: 'ඕනෑම ව්‍යාපාරයක් සම්බන්ද digital marketing support එකකට කතා කරන්න ❤️' }
     ]
+  },
+  {
+    id: 6,
+    slug: 'things-you-should-know-before-building-a-website',
+    language: 'en',
+    title: 'Things You Should Know Before Building a Website for Your Business',
+    category: 'Business',
+    date: 'May 11, 2026',
+    excerpt: 'If you’re thinking about creating a website for your business, there are a few important things you should know before getting started.',
+    intro: 'If you’re thinking about creating a website for your business, there are a few important things you should know before getting started.<br><br>Today, most businesses are moving into the digital world. Because of that, having a website is no longer something only big companies need. Even a small business can benefit a lot from having a professional online presence.',
+    sections: [
+      { type: 'text', value: 'I’ve already explained the benefits of having a website for a business in another blog post, so if you haven’t read it yet, you can check it out in the blog section.' },
+      { type: 'heading', value: '1. Choosing a Domain Name' },
+      { type: 'text', value: 'The first thing you need is a domain name. A domain name is simply the name people type on the internet to find your business. In most cases, businesses use their brand name as the domain.' },
+      {
+        type: 'list',
+        value: 'For example, if your business name is <strong>Araliya Clothing</strong>, your domain name could be:',
+        items: [
+          'www.araliyaclothing.com',
+          'www.araliyaclothing.lk'
+        ]
+      },
+      { type: 'text', value: 'Domain names are written in English only.' },
+      { type: 'heading', value: 'Types of Domain Names' },
+      {
+        type: 'list',
+        value: 'There are different types of domain extensions, but these are the most common ones:',
+        items: [
+          '<strong>.lk</strong> — To get a .lk domain, you usually need a registered business (BR).',
+          '<strong>.com</strong> — Anyone can buy a .com domain. You don’t need a business registration for it.'
+        ]
+      },
+      { type: 'heading', value: '2. Hosting' },
+      { type: 'text', value: 'Hosting is the space where your website is stored online. There are different ways to purchase hosting depending on your preference and budget.' },
+      {
+        type: 'list',
+        value: 'Different payment options:',
+        items: [
+          '<strong>Yearly</strong> — Paying through an annual plan.',
+          '<strong>Monthly</strong> — Paying based on usage, similar to utility bills.'
+        ]
+      },
+      { type: 'heading', value: '3. Quality Photos and Videos' },
+      { type: 'text', value: 'One mistake many businesses make is using low-quality photos and videos from social media on their websites.' },
+      { type: 'text', value: 'A website represents your business differently. People judge your brand within seconds, so visuals matter a lot. Using good quality photos and videos helps your business look more professional and trustworthy.' },
+      { type: 'heading', value: 'The Next Question Most People Ask' },
+      { type: 'text', value: 'Once you have a <strong>domain name + hosting + quality content</strong>, you’re ready to build a professional website for your business.' },
+      { type: 'text', value: 'But then another question comes up: <strong>“How do I update the website later?”</strong> or <strong>“How do I add new photos or change details?”</strong><br><br>Actually, those things are not difficult at all. The important part is building the website properly from the beginning so managing it later becomes easy.' },
+      { type: 'text', value: 'If your business is growing and moving beyond the starting stage, this is probably the right time to invest in a professional website.' },
+      { type: 'text', value: 'If you need support with websites or digital marketing for your business, feel free to contact me ❤️' }
+    ]
   }
 ]
