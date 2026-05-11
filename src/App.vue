@@ -31,18 +31,21 @@
     </main>
     
     <Footer />
+    <FloatingMailButton />
   </div>
 </template>
 
 <script>
 import Footer from './components/Footer.vue';
 import ThemeToggle from './components/ThemeToggle.vue';
+import FloatingMailButton from './components/FloatingMailButton.vue';
 
 export default {
   name: 'App',
   components: {
     Footer,
-    ThemeToggle
+    ThemeToggle,
+    FloatingMailButton
   },
   data() {
     return {
