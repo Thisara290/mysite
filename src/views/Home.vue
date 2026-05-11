@@ -13,101 +13,122 @@
     <!-- SECTION 2: POSH PROFILE SECTION -->
     <section class="posh-profile">
       <div class="container posh-container">
-        <div class="posh-image-box">
-          <div class="decorative-blob"></div>
-          <img 
-            src="https://res.cloudinary.com/djkw8ijom/image/upload/v1759600660/1000643852_wupbsz.jpg" 
-            alt="Thisara Gunasekara - Software Engineer & Digital Marketing Lead" 
-            class="posh-profile-img"
-          />
-          <div class="glass-badge">
-            <span class="badge-icon">🚀</span>
-            <span class="badge-text">Result Driven</span>
+        <RevealOnScroll animation="fade-left">
+          <div class="posh-image-box">
+            <div class="decorative-blob"></div>
+            <img 
+              src="https://res.cloudinary.com/djkw8ijom/image/upload/v1759600660/1000643852_wupbsz.jpg" 
+              alt="Thisara Gunasekara - Software Engineer & Digital Marketing Lead" 
+              class="posh-profile-img"
+            />
+            <div class="glass-badge">
+              <span class="badge-icon">🚀</span>
+              <span class="badge-text">Result Driven</span>
+            </div>
           </div>
-        </div>
-        <div class="posh-text-box">
-          <div class="greeting-tag">Hello, I am</div>
-          <h2 class="posh-name">Thisara Gunasekara</h2>
-          <h3 class="posh-role">Software Engineer & Digital Marketing Lead</h3>
-          <p class="posh-desc">
-            If your company's image needs to improve in the digital space, you've come to the right place. 
-            I specialize in creating modern, SEO-friendly websites and coordinating comprehensive digital strategies 
-            that elevate your brand's online presence and drive real, measurable results. Let's rewrite your digital story together.
-          </p>
-          <div class="posh-buttons">
-            <router-link to="/contact" class="posh-btn primary">Get In Touch</router-link>
-            <router-link to="/projects" class="posh-btn outline">View My Work</router-link>
+        </RevealOnScroll>
+        <RevealOnScroll animation="fade-right" :delay="200">
+          <div class="posh-text-box">
+            <div class="greeting-tag">Hello, I am</div>
+            <h2 class="posh-name">Thisara Gunasekara</h2>
+            <h3 class="posh-role">Software Engineer & Digital Marketing Lead</h3>
+            <p class="posh-desc">
+              If your company's image needs to improve in the digital space, you've come to the right place. 
+              I specialize in creating modern, SEO-friendly websites and coordinating comprehensive digital strategies 
+              that elevate your brand's online presence and drive real, measurable results. Let's rewrite your digital story together.
+            </p>
+            <div class="posh-buttons">
+              <router-link to="/contact" class="posh-btn primary">Get In Touch</router-link>
+              <router-link to="/projects" class="posh-btn outline">View My Work</router-link>
+            </div>
           </div>
-        </div>
+        </RevealOnScroll>
       </div>
     </section>
     
     <section class="services">
       <div class="container">
-        <h2 class="section-title">What I Do</h2>
-        <p class="section-subtitle">Comprehensive Digital Marketing Solutions for Your Business</p>
+        <RevealOnScroll animation="fade-up">
+          <h2 class="section-title">What I Do</h2>
+          <p class="section-subtitle">Comprehensive Digital Marketing Solutions for Your Business</p>
+        </RevealOnScroll>
         
         <div class="services-grid">
-          <div class="service-card modern-card">
-            <div class="service-icon-wrapper">
-              <i class="service-icon">🌐</i>
+          <RevealOnScroll animation="fade-up" :delay="0">
+            <div class="service-card modern-card">
+              <div class="service-icon-wrapper">
+                <i class="service-icon">🌐</i>
+              </div>
+              <div class="service-content">
+                <h3>Modern SEO-Friendly Websites</h3>
+                <p>I create business-related, modern websites that are optimized for search engines. Your website will not only look professional but also rank well on Google, driving organic traffic.</p>
+              </div>
+              <div class="card-glow"></div>
             </div>
-            <div class="service-content">
-              <h3>Modern SEO-Friendly Websites</h3>
-              <p>I create business-related, modern websites that are optimized for search engines. Your website will not only look professional but also rank well on Google, driving organic traffic.</p>
-            </div>
-            <div class="card-glow"></div>
-          </div>
+          </RevealOnScroll>
           
-          <div class="service-card modern-card">
-            <div class="service-icon-wrapper">
-              <i class="service-icon">📱</i>
+          <RevealOnScroll animation="fade-up" :delay="100">
+            <div class="service-card modern-card">
+              <div class="service-icon-wrapper">
+                <i class="service-icon">📱</i>
+              </div>
+              <div class="service-content">
+                <h3>Social Media Coordination</h3>
+                <p>I develop and execute comprehensive social media plans tailored to your business goals. From strategy to execution, ensuring your brand maintains a consistent presence.</p>
+              </div>
+              <div class="card-glow"></div>
             </div>
-            <div class="service-content">
-              <h3>Social Media Coordination</h3>
-              <p>I develop and execute comprehensive social media plans tailored to your business goals. From strategy to execution, ensuring your brand maintains a consistent presence.</p>
-            </div>
-            <div class="card-glow"></div>
-          </div>
+          </RevealOnScroll>
           
-          <div class="service-card modern-card">
-            <div class="service-icon-wrapper">
-              <i class="service-icon">🎬</i>
+          <RevealOnScroll animation="fade-up" :delay="200">
+            <div class="service-card modern-card">
+              <div class="service-icon-wrapper">
+                <i class="service-icon">🎬</i>
+              </div>
+              <div class="service-content">
+                <h3>Content Creation</h3>
+                <p>I create engaging reels, images, and videos that capture attention. From short-form TikToks to professional LinkedIn posts, I produce content that resonates.</p>
+              </div>
+              <div class="card-glow"></div>
             </div>
-            <div class="service-content">
-              <h3>Content Creation</h3>
-              <p>I create engaging reels, images, and videos that capture attention. From short-form TikToks to professional LinkedIn posts, I produce content that resonates.</p>
-            </div>
-            <div class="card-glow"></div>
-          </div>
+          </RevealOnScroll>
           
-          <div class="service-card modern-card">
-            <div class="service-icon-wrapper">
-              <i class="service-icon">📊</i>
+          <RevealOnScroll animation="fade-up" :delay="300">
+            <div class="service-card modern-card">
+              <div class="service-icon-wrapper">
+                <i class="service-icon">📊</i>
+              </div>
+              <div class="service-content">
+                <h3>Ad Campaign Management</h3>
+                <p>I know how to run effective ad campaigns. From targeting the right audience to optimizing performance, I ensure your advertising dollars deliver maximum ROI.</p>
+              </div>
+              <div class="card-glow"></div>
             </div>
-            <div class="service-content">
-              <h3>Ad Campaign Management</h3>
-              <p>I know how to run effective ad campaigns. From targeting the right audience to optimizing performance, I ensure your advertising dollars deliver maximum ROI.</p>
-            </div>
-            <div class="card-glow"></div>
-          </div>
+          </RevealOnScroll>
         </div>
       </div>
     </section>
     
     <section class="cta">
       <div class="container">
-        <h2>Ready to Transform Your Digital Presence?</h2>
-        <p>Let's work together to improve your business image in the digital space and reach your target audience effectively.</p>
-        <router-link to="/contact" class="btn btn-cta">Contact Me Today</router-link>
+        <RevealOnScroll animation="scale">
+          <h2>Ready to Transform Your Digital Presence?</h2>
+          <p>Let's work together to improve your business image in the digital space and reach your target audience effectively.</p>
+          <router-link to="/contact" class="btn btn-cta">Contact Me Today</router-link>
+        </RevealOnScroll>
       </div>
     </section>
   </div>
 </template>
 
 <script>
+import RevealOnScroll from '../components/RevealOnScroll.vue'
+
 export default {
-  name: 'Home'
+  name: 'Home',
+  components: {
+    RevealOnScroll
+  }
 }
 </script>
 
@@ -200,10 +221,16 @@ export default {
   background: var(--bg-secondary);
 }
 
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
 .posh-container {
   display: flex;
   align-items: center;
-  gap: 60px;
+  gap: 100px;
 }
 
 .posh-image-box {
@@ -278,7 +305,7 @@ export default {
 }
 
 .posh-text-box {
-  flex: 1.2;
+  flex: 1;
 }
 
 .greeting-tag {
@@ -563,6 +590,10 @@ export default {
   
   .cta p {
     font-size: 1.1rem;
+  }
+
+  .container {
+    padding: 0 20px;
   }
 }
 </style>

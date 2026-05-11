@@ -3,119 +3,130 @@
     <!-- SECTION 1: SLOGAN HERO -->
     <section class="banner-slogan">
       <div class="banner-content">
-        <h1 class="slogan-title">
-          <span class="slogan-top">Don't Take Rest After Your First Victory.</span>
-          <span class="slogan-bottom">Because If You Fail In Second, More Lips Are Waiting To Say That Your First Victory Was <span class="highlight">Just Luck.</span></span>
-        </h1>
+        <RevealOnScroll animation="fade-up">
+          <h1 class="slogan-title">
+            <span class="slogan-top">Don't Take Rest After Your First Victory.</span>
+            <span class="slogan-bottom">Because If You Fail In Second, More Lips Are Waiting To Say That Your First Victory Was <span class="highlight">Just Luck.</span></span>
+          </h1>
+        </RevealOnScroll>
       </div>
     </section>
 
     <div class="container">
       <header class="page-header">
-        <h1>My Projects</h1>
-        <p class="subtitle">Showcasing my digital marketing and web development work</p>
+        <RevealOnScroll animation="fade-up">
+          <h1>My Projects</h1>
+          <p class="subtitle">Showcasing my digital marketing and web development work</p>
+        </RevealOnScroll>
       </header>
 
       <div class="projects-list" v-if="projects.length > 0">
-        <div class="project-card" v-for="project in projects" :key="project.id">
-          <div class="project-header">
-            <h3 class="project-title">{{ project.title }}</h3>
-            <p class="project-description">{{ project.description }}</p>
-          </div>
+        <RevealOnScroll 
+          v-for="(project, index) in projects" 
+          :key="project.id" 
+          animation="fade-up" 
+          :delay="index * 150"
+        >
+          <div class="project-card">
+            <div class="project-header">
+              <h3 class="project-title">{{ project.title }}</h3>
+              <p class="project-description">{{ project.description }}</p>
+            </div>
 
-          <div class="project-images-section" v-if="project.images && project.images.length > 0">
-            <div class="project-images-grid">
-              <div 
-                class="project-image-wrapper" 
-                v-for="(image, index) in project.images" 
-                :key="index"
+            <div class="project-images-section" v-if="project.images && project.images.length > 0">
+              <div class="project-images-grid">
+                <div 
+                  class="project-image-wrapper" 
+                  v-for="(image, index) in project.images" 
+                  :key="index"
+                >
+                  <img 
+                    :src="image" 
+                    :alt="`${project.title} - Image ${index + 1}`"
+                    class="project-image"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="website-preview-section" v-if="project.link">
+              <h4 class="website-preview-title">Live Website</h4>
+              <a 
+                :href="project.link" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                class="website-preview-card"
               >
-                <img 
-                  :src="image" 
-                  :alt="`${project.title} - Image ${index + 1}`"
-                  class="project-image"
-                />
-              </div>
-            </div>
-          </div>
-
-          <div class="website-preview-section" v-if="project.link">
-            <h4 class="website-preview-title">Live Website</h4>
-            <a 
-              :href="project.link" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              class="website-preview-card"
-            >
-              <div class="browser-frame">
-                <div class="browser-header">
-                  <div class="browser-dots">
-                    <span class="dot dot-red"></span>
-                    <span class="dot dot-yellow"></span>
-                    <span class="dot dot-green"></span>
+                <div class="browser-frame">
+                  <div class="browser-header">
+                    <div class="browser-dots">
+                      <span class="dot dot-red"></span>
+                      <span class="dot dot-yellow"></span>
+                      <span class="dot dot-green"></span>
+                    </div>
+                    <div class="browser-url-bar">{{ project.link.replace(/^https?:\/\//, '') }}</div>
                   </div>
-                  <div class="browser-url-bar">{{ project.link.replace(/^https?:\/\//, '') }}</div>
+                  <div class="website-preview-image" v-if="project.images && project.images.length > 0">
+                    <img :src="project.images[0]" :alt="project.title" />
+                  </div>
+                  <div class="click-overlay">
+                    <span class="click-here-text">Click here to visit →</span>
+                  </div>
                 </div>
-                <div class="website-preview-image" v-if="project.images && project.images.length > 0">
-                  <img :src="project.images[0]" :alt="project.title" />
-                </div>
-                <div class="click-overlay">
-                  <span class="click-here-text">Click here to visit →</span>
-                </div>
-              </div>
-            </a>
-          </div>
-
-          <div class="project-meta">
-            <div class="project-duration-section" v-if="project.duration || project.durationReason">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <circle cx="12" cy="12" r="10"></circle>
-                <polyline points="12 6 12 12 16 14"></polyline>
-              </svg>
-              <div class="duration-content">
-                <span class="project-duration-text">Project duration was {{ project.duration }}</span>
-                <p class="duration-reason" v-if="project.durationReason">{{ project.durationReason }}</p>
-              </div>
-            </div>
-            <div class="technologies-section" v-if="project.techDetails && project.techDetails.length > 0">
-              <h4 class="technologies-title">Technologies Used</h4>
-              <div class="tech-details-list">
-                <div class="tech-detail-item" v-for="(tech, index) in project.techDetails" :key="index">
-                  <span class="tech-name" v-html="tech.name"></span>
-                  <p class="tech-reason">{{ tech.reason }}</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="analytics-section" v-if="project.analytics">
-            <div class="analytics-header">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="analytics-icon">
-                <line x1="18" y1="20" x2="18" y2="10"></line>
-                <line x1="12" y1="20" x2="12" y2="4"></line>
-                <line x1="6" y1="20" x2="6" y2="14"></line>
-              </svg>
-              <h4 class="analytics-title">Results & Dashboard Integration</h4>
-            </div>
-            
-            <p class="analytics-description" v-html="project.analytics.description"></p>
-            
-            <div class="analytics-image-container">
-              <img :src="project.analytics.image" alt="Analytics Dashboard" class="analytics-image" />
+              </a>
             </div>
 
-            <div class="analytics-benefits">
-              <div class="benefit-item" v-for="(benefit, index) in project.analytics.benefits" :key="index">
-                <div class="benefit-icon">
-                  <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                    <polyline points="20 6 9 17 4 12"></polyline>
-                  </svg>
+            <div class="project-meta">
+              <div class="project-duration-section" v-if="project.duration || project.durationReason">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+                <div class="duration-content">
+                  <span class="project-duration-text">Project duration was {{ project.duration }}</span>
+                  <p class="duration-reason" v-if="project.durationReason">{{ project.durationReason }}</p>
                 </div>
-                <p class="benefit-text" v-html="benefit"></p>
+              </div>
+              <div class="technologies-section" v-if="project.techDetails && project.techDetails.length > 0">
+                <h4 class="technologies-title">Technologies Used</h4>
+                <div class="tech-details-list">
+                  <div class="tech-detail-item" v-for="(tech, index) in project.techDetails" :key="index">
+                    <span class="tech-name" v-html="tech.name"></span>
+                    <p class="tech-reason">{{ tech.reason }}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="analytics-section" v-if="project.analytics">
+              <div class="analytics-header">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="analytics-icon">
+                  <line x1="18" y1="20" x2="18" y2="10"></line>
+                  <line x1="12" y1="20" x2="12" y2="4"></line>
+                  <line x1="6" y1="20" x2="6" y2="14"></line>
+                </svg>
+                <h4 class="analytics-title">Results & Dashboard Integration</h4>
+              </div>
+              
+              <p class="analytics-description" v-html="project.analytics.description"></p>
+              
+              <div class="analytics-image-container">
+                <img :src="project.analytics.image" alt="Analytics Dashboard" class="analytics-image" />
+              </div>
+
+              <div class="analytics-benefits">
+                <div class="benefit-item" v-for="(benefit, index) in project.analytics.benefits" :key="index">
+                  <div class="benefit-icon">
+                    <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                  </div>
+                  <p class="benefit-text" v-html="benefit"></p>
+                </div>
               </div>
             </div>
           </div>
-        </div>
+        </RevealOnScroll>
       </div>
 
       <div class="empty-state" v-else>
@@ -126,8 +137,13 @@
 </template>
 
 <script>
+import RevealOnScroll from '../components/RevealOnScroll.vue'
+
 export default {
   name: 'Projects',
+  components: {
+    RevealOnScroll
+  },
   data() {
     return {
       projects: [

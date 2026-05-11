@@ -13,105 +13,117 @@
     <!-- SECTION 2: ABOUT PROFILE -->
     <section class="posh-profile">
       <div class="container posh-container">
-        <div class="posh-image-box">
-          <div class="decorative-blob"></div>
-          <img 
-            src="https://res.cloudinary.com/djkw8ijom/image/upload/v1757067381/1690439739605_hznc1k.jpg" 
-            alt="Thisara Gunasekara" 
-            class="posh-profile-img"
-          />
-          <div class="glass-badge">
-            <span class="badge-icon">💡</span>
-            <span class="badge-text">Innovative Mind</span>
+        <RevealOnScroll animation="fade-left">
+          <div class="posh-image-box">
+            <div class="decorative-blob"></div>
+            <img 
+              src="https://res.cloudinary.com/djkw8ijom/image/upload/v1757067381/1690439739605_hznc1k.jpg" 
+              alt="Thisara Gunasekara" 
+              class="posh-profile-img"
+            />
+            <div class="glass-badge">
+              <span class="badge-icon">💡</span>
+              <span class="badge-text">Innovative Mind</span>
+            </div>
           </div>
-        </div>
-        <div class="posh-text-box">
-          <div class="greeting-tag">About Me</div>
-          <h2 class="posh-name">Hello! I'm Thisara Gunasekara</h2>
-          <p class="posh-desc">
-            I am a versatile tech professional bridging the gap between development, product management, and digital strategy. 
-            My journey in the industry has been an exciting adventure of continuous learning, allowing me to build and 
-            manage solutions that drive real business impact and deliver beautiful user experiences.
-          </p>
-          <p class="posh-desc">
-            While my foundation lies in full-stack development, my expertise extends deeply into Project Management and 
-            SaaS Product Management. I thrive on overseeing projects from conception to launch, ensuring that 
-            cross-functional teams deliver innovative, scalable, and user-centric products that solve complex problems.
-          </p>
-          <p class="posh-desc">
-            Furthermore, my background in Digital Marketing empowers me to not only build great applications but also 
-            position them effectively in the market. I believe in a holistic approach—combining writing clean code, 
-            leading agile projects, and executing data-driven strategies to achieve meaningful and lasting success.
-          </p>
-          <div class="posh-buttons">
-            <a href="https://res.cloudinary.com/djkw8ijom/image/upload/v1772044318/Thisara_Gunasekara_-_Digital_Project_Manager_w057so.pdf" 
-               class="posh-btn primary" 
-               target="_blank" 
-               download="Thisara-Gunasekara-Resume.pdf">
-              Download Resume
-            </a>
+        </RevealOnScroll>
+        <RevealOnScroll animation="fade-right" :delay="200">
+          <div class="posh-text-box">
+            <div class="greeting-tag">About Me</div>
+            <h2 class="posh-name">Hello! I'm Thisara Gunasekara</h2>
+            <p class="posh-desc">
+              I am a versatile tech professional bridging the gap between development, product management, and digital strategy. 
+              My journey in the industry has been an exciting adventure of continuous learning, allowing me to build and 
+              manage solutions that drive real business impact and deliver beautiful user experiences.
+            </p>
+            <p class="posh-desc">
+              While my foundation lies in full-stack development, my expertise extends deeply into Project Management and 
+              SaaS Product Management. I thrive on overseeing projects from conception to launch, ensuring that 
+              cross-functional teams deliver innovative, scalable, and user-centric products that solve complex problems.
+            </p>
+            <p class="posh-desc">
+              Furthermore, my background in Digital Marketing empowers me to not only build great applications but also 
+              position them effectively in the market. I believe in a holistic approach—combining writing clean code, 
+              leading agile projects, and executing data-driven strategies to achieve meaningful and lasting success.
+            </p>
+            <div class="posh-buttons">
+              <a href="https://res.cloudinary.com/djkw8ijom/image/upload/v1772044318/Thisara_Gunasekara_-_Digital_Project_Manager_w057so.pdf" 
+                 class="posh-btn primary" 
+                 target="_blank" 
+                 download="Thisara-Gunasekara-Resume.pdf">
+                Download Resume
+              </a>
+            </div>
           </div>
-        </div>
+        </RevealOnScroll>
       </div>
     </section>
 
     <!-- SECTION 3: SKILLS -->
     <section class="services">
       <div class="container">
-        <h2 class="section-title">Skills & Technologies</h2>
-        <p class="section-subtitle">What I bring to the table</p>
+        <RevealOnScroll animation="fade-up">
+          <h2 class="section-title">Skills & Technologies</h2>
+          <p class="section-subtitle">What I bring to the table</p>
+        </RevealOnScroll>
         
         <div class="services-grid">
-          <div class="service-card modern-card">
-            <div class="service-icon-wrapper">
-              <i class="service-icon">💻</i>
+          <RevealOnScroll animation="fade-up" :delay="0">
+            <div class="service-card modern-card">
+              <div class="service-icon-wrapper">
+                <i class="service-icon">💻</i>
+              </div>
+              <div class="service-content">
+                <h3>Frontend Development</h3>
+                <ul>
+                  <li>Vue.js & React</li>
+                  <li>JavaScript/TypeScript</li>
+                  <li>HTML5 & CSS3</li>
+                  <li>Responsive Design</li>
+                  <li>Modern CSS (Flexbox, Grid)</li>
+                </ul>
+              </div>
+              <div class="card-glow"></div>
             </div>
-            <div class="service-content">
-              <h3>Frontend Development</h3>
-              <ul>
-                <li>Vue.js & React</li>
-                <li>JavaScript/TypeScript</li>
-                <li>HTML5 & CSS3</li>
-                <li>Responsive Design</li>
-                <li>Modern CSS (Flexbox, Grid)</li>
-              </ul>
-            </div>
-            <div class="card-glow"></div>
-          </div>
+          </RevealOnScroll>
           
-          <div class="service-card modern-card">
-            <div class="service-icon-wrapper">
-              <i class="service-icon">⚙️</i>
+          <RevealOnScroll animation="fade-up" :delay="100">
+            <div class="service-card modern-card">
+              <div class="service-icon-wrapper">
+                <i class="service-icon">⚙️</i>
+              </div>
+              <div class="service-content">
+                <h3>Backend Development</h3>
+                <ul>
+                  <li>Node.js & Express</li>
+                  <li>Python & Django</li>
+                  <li>RESTful APIs</li>
+                  <li>Database Design</li>
+                  <li>Authentication & Security</li>
+                </ul>
+              </div>
+              <div class="card-glow"></div>
             </div>
-            <div class="service-content">
-              <h3>Backend Development</h3>
-              <ul>
-                <li>Node.js & Express</li>
-                <li>Python & Django</li>
-                <li>RESTful APIs</li>
-                <li>Database Design</li>
-                <li>Authentication & Security</li>
-              </ul>
-            </div>
-            <div class="card-glow"></div>
-          </div>
+          </RevealOnScroll>
           
-          <div class="service-card modern-card">
-            <div class="service-icon-wrapper">
-              <i class="service-icon">🛠️</i>
+          <RevealOnScroll animation="fade-up" :delay="200">
+            <div class="service-card modern-card">
+              <div class="service-icon-wrapper">
+                <i class="service-icon">🛠️</i>
+              </div>
+              <div class="service-content">
+                <h3>Tools & Technologies</h3>
+                <ul>
+                  <li>Git & GitHub</li>
+                  <li>Docker & Deployment</li>
+                  <li>Cloud Services (AWS)</li>
+                  <li>Agile Development</li>
+                  <li>Testing & Debugging</li>
+                </ul>
+              </div>
+              <div class="card-glow"></div>
             </div>
-            <div class="service-content">
-              <h3>Tools & Technologies</h3>
-              <ul>
-                <li>Git & GitHub</li>
-                <li>Docker & Deployment</li>
-                <li>Cloud Services (AWS)</li>
-                <li>Agile Development</li>
-                <li>Testing & Debugging</li>
-              </ul>
-            </div>
-            <div class="card-glow"></div>
-          </div>
+          </RevealOnScroll>
         </div>
       </div>
     </section>
@@ -119,8 +131,13 @@
 </template>
 
 <script>
+import RevealOnScroll from '../components/RevealOnScroll.vue'
+
 export default {
-  name: 'About'
+  name: 'About',
+  components: {
+    RevealOnScroll
+  }
 }
 </script>
 

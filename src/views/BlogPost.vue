@@ -10,17 +10,19 @@
     <template v-else>
       <!-- Hero -->
       <section class="post-hero">
-        <div class="post-hero-content">
-          <div class="post-meta-top">
-            <span class="post-category">{{ blog.category }}</span>
-            <span class="post-date">{{ blog.date }}</span>
-            <span class="post-lang-badge" :class="blog.language || 'en'">
-              {{ (blog.language === 'si') ? 'සිංහල' : 'English' }}
-            </span>
+        <RevealOnScroll animation="fade-up">
+          <div class="post-hero-content">
+            <div class="post-meta-top">
+              <span class="post-category">{{ blog.category }}</span>
+              <span class="post-date">{{ blog.date }}</span>
+              <span class="post-lang-badge" :class="blog.language || 'en'">
+                {{ (blog.language === 'si') ? 'සිංහල' : 'English' }}
+              </span>
+            </div>
+            <h1 class="post-title">{{ blog.title }}</h1>
+            <p class="post-intro" v-html="blog.intro"></p>
           </div>
-          <h1 class="post-title">{{ blog.title }}</h1>
-          <p class="post-intro" v-html="blog.intro"></p>
-        </div>
+        </RevealOnScroll>
       </section>
 
       <!-- Article Body -->
@@ -28,92 +30,94 @@
         <article class="post-article" :class="{ 'si-content': blog.language === 'si' }">
 
           <template v-for="(section, index) in blog.sections" :key="index">
-
-            <!-- Heading -->
-            <div class="content-block" v-if="section.type === 'heading'">
-              <h2 class="section-heading">{{ section.value }}</h2>
-            </div>
-
-            <!-- Text -->
-            <div class="content-block" v-if="section.type === 'text'">
-              <p class="content-text" v-html="section.value"></p>
-            </div>
-
-            <!-- List -->
-            <div class="content-block" v-if="section.type === 'list'">
-              <p class="content-text list-lead" v-if="section.value" v-html="section.value"></p>
-              <ul class="content-list">
-                <li v-for="(item, i) in section.items" :key="i" v-html="item"></li>
-              </ul>
-            </div>
-
-            <!-- Case Study -->
-            <div class="case-study-section" v-if="section.type === 'case-study'">
-              <div class="case-study-header">
-                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-                <h3>Real-World Case Study: <a :href="section.url" target="_blank" rel="noopener noreferrer" class="inline-link">{{ section.name }}</a></h3>
+            <RevealOnScroll animation="fade-up" :delay="index * 50">
+              <!-- Heading -->
+              <div class="content-block" v-if="section.type === 'heading'">
+                <h2 class="section-heading">{{ section.value }}</h2>
               </div>
-              <p class="content-text">{{ section.context }}</p>
-              <p class="content-text" v-if="section.fbUrl">
-                You can also view their
-                <a :href="section.fbUrl" target="_blank" rel="noopener noreferrer" class="inline-link">redesigned Facebook page here</a>.
-              </p>
-            </div>
 
-            <!-- Pillars -->
-            <div class="pillars-section" v-if="section.type === 'pillars'">
-              <h2 class="section-heading">{{ section.value }}</h2>
-              <div class="pillars-list">
-                <div class="pillar-item" v-for="pillar in section.items" :key="pillar.title">
-                  <div class="pillar-label">
-                    <span class="pillar-icon">{{ pillar.icon }}</span>
-                    <strong class="pillar-title">{{ pillar.title }}</strong>
-                  </div>
-                  <div class="pillar-points">
-                    <div class="point-item" v-for="(point, i) in pillar.points" :key="i">
-                      <div class="point-icon">
-                        <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <!-- Text -->
+              <div class="content-block" v-if="section.type === 'text'">
+                <p class="content-text" v-html="section.value"></p>
+              </div>
+
+              <!-- List -->
+              <div class="content-block" v-if="section.type === 'list'">
+                <p class="content-text list-lead" v-if="section.value" v-html="section.value"></p>
+                <ul class="content-list">
+                  <li v-for="(item, i) in section.items" :key="i" v-html="item"></li>
+                </ul>
+              </div>
+
+              <!-- Case Study -->
+              <div class="case-study-section" v-if="section.type === 'case-study'">
+                <div class="case-study-header">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                  <h3>Real-World Case Study: <a :href="section.url" target="_blank" rel="noopener noreferrer" class="inline-link">{{ section.name }}</a></h3>
+                </div>
+                <p class="content-text">{{ section.context }}</p>
+                <p class="content-text" v-if="section.fbUrl">
+                  You can also view their
+                  <a :href="section.fbUrl" target="_blank" rel="noopener noreferrer" class="inline-link">redesigned Facebook page here</a>.
+                </p>
+              </div>
+
+              <!-- Pillars -->
+              <div class="pillars-section" v-if="section.type === 'pillars'">
+                <h2 class="section-heading">{{ section.value }}</h2>
+                <div class="pillars-list">
+                  <div class="pillar-item" v-for="pillar in section.items" :key="pillar.title">
+                    <div class="pillar-label">
+                      <span class="pillar-icon">{{ pillar.icon }}</span>
+                      <strong class="pillar-title">{{ pillar.title }}</strong>
+                    </div>
+                    <div class="pillar-points">
+                      <div class="point-item" v-for="(point, i) in pillar.points" :key="i">
+                        <div class="point-icon">
+                          <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        </div>
+                        <p class="point-text" v-html="point"></p>
                       </div>
-                      <p class="point-text" v-html="point"></p>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
 
-            <!-- Takeaway -->
-            <div class="takeaway-section" v-if="section.type === 'takeaway'">
-              <div class="takeaway-header">
-                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                <h3>Key Takeaway</h3>
+              <!-- Takeaway -->
+              <div class="takeaway-section" v-if="section.type === 'takeaway'">
+                <div class="takeaway-header">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                  <h3>Key Takeaway</h3>
+                </div>
+                <div class="takeaway-card">
+                  <span class="takeaway-quote">❝</span>
+                  <p class="takeaway-text">{{ section.value }}</p>
+                </div>
               </div>
-              <div class="takeaway-card">
-                <span class="takeaway-quote">❝</span>
-                <p class="takeaway-text">{{ section.value }}</p>
-              </div>
-            </div>
-
+            </RevealOnScroll>
           </template>
 
           <!-- Footer -->
-          <div class="post-footer">
-            <div class="author-block">
-              <div class="author-avatar">T</div>
-              <div>
-                <p class="author-label">Written by</p>
-                <strong class="author-name">Thisara Gunasekara</strong>
+          <RevealOnScroll animation="fade-up">
+            <div class="post-footer">
+              <div class="author-block">
+                <div class="author-avatar">T</div>
+                <div>
+                  <p class="author-label">Written by</p>
+                  <strong class="author-name">Thisara Gunasekara</strong>
+                </div>
+              </div>
+              <div class="post-actions">
+                <button class="share-btn" @click="copyLink">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg>
+                  {{ copied ? 'Link Copied!' : 'Share this post' }}
+                </button>
+                <router-link to="/blogs" class="back-link-btn">
+                  ← All Posts
+                </router-link>
               </div>
             </div>
-            <div class="post-actions">
-              <button class="share-btn" @click="copyLink">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg>
-                {{ copied ? 'Link Copied!' : 'Share this post' }}
-              </button>
-              <router-link to="/blogs" class="back-link-btn">
-                ← All Posts
-              </router-link>
-            </div>
-          </div>
+          </RevealOnScroll>
 
         </article>
       </div>
@@ -123,9 +127,13 @@
 
 <script>
 import { blogs } from '../blogData.js'
+import RevealOnScroll from '../components/RevealOnScroll.vue'
 
 export default {
   name: 'BlogPost',
+  components: {
+    RevealOnScroll
+  },
   data() {
     return {
       copied: false

@@ -4,10 +4,12 @@
     <!-- HERO BANNER -->
     <section class="banner-slogan">
       <div class="banner-content">
-        <h1 class="slogan-title">
-          <span class="slogan-top">Knowledge shared is knowledge multiplied.</span>
-          <span class="slogan-bottom">Great marketing isn't about <span class="highlight">selling</span> — it's about <span class="highlight">connecting.</span></span>
-        </h1>
+        <RevealOnScroll animation="fade-up">
+          <h1 class="slogan-title">
+            <span class="slogan-top">Knowledge shared is knowledge multiplied.</span>
+            <span class="slogan-bottom">Great marketing isn't about <span class="highlight">selling</span> — it's about <span class="highlight">connecting.</span></span>
+          </h1>
+        </RevealOnScroll>
       </div>
     </section>
 
@@ -35,34 +37,47 @@
       </div>
 
       <div class="blogs-list">
-        <article class="blog-card" v-for="blog in displayBlogs" :key="blog.id">
-          <div class="blog-meta-top">
-            <span class="blog-category">{{ blog.category }}</span>
-            <span class="blog-date">{{ blog.date }}</span>
-          </div>
-          <h2 class="blog-title">{{ blog.title }}</h2>
-          <p class="blog-excerpt">{{ blog.excerpt }}</p>
-          <router-link :to="`/blogs/${blog.slug}`" class="read-more-btn">
-            Read Full Post
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-          </router-link>
-        </article>
+        <RevealOnScroll 
+          v-for="(blog, index) in displayBlogs" 
+          :key="blog.id" 
+          animation="fade-up" 
+          :delay="index * 100"
+        >
+          <article class="blog-card">
+            <div class="blog-meta-top">
+              <span class="blog-category">{{ blog.category }}</span>
+              <span class="blog-date">{{ blog.date }}</span>
+            </div>
+            <h2 class="blog-title">{{ blog.title }}</h2>
+            <p class="blog-excerpt">{{ blog.excerpt }}</p>
+            <router-link :to="`/blogs/${blog.slug}`" class="read-more-btn">
+              Read Full Post
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </router-link>
+          </article>
+        </RevealOnScroll>
       </div>
 
-      <div class="more-coming">
-        <div class="more-coming-icon">✍️</div>
-        <h3>More articles on the way</h3>
-        <p>I write about marketing, projects, travel, and lessons learned. <router-link to="/contact" class="inline-link">Get in touch</router-link> to suggest a topic.</p>
-      </div>
+      <RevealOnScroll animation="scale">
+        <div class="more-coming">
+          <div class="more-coming-icon">✍️</div>
+          <h3>More articles on the way</h3>
+          <p>I write about marketing, projects, travel, and lessons learned. <router-link to="/contact" class="inline-link">Get in touch</router-link> to suggest a topic.</p>
+        </div>
+      </RevealOnScroll>
     </div>
   </div>
 </template>
 
 <script>
 import { blogs } from '../blogData.js'
+import RevealOnScroll from '../components/RevealOnScroll.vue'
 
 export default {
   name: 'Blogs',
+  components: {
+    RevealOnScroll
+  },
   data() {
     return {
       activeLang: 'en'
