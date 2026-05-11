@@ -17,7 +17,7 @@
           <div class="decorative-blob"></div>
           <img 
             src="https://res.cloudinary.com/djkw8ijom/image/upload/v1759600660/1000643852_wupbsz.jpg" 
-            alt="Thisara Gunasekara - Digital Marketing Coordinator" 
+            alt="Thisara Gunasekara - Software Engineer & Digital Marketing Lead" 
             class="posh-profile-img"
           />
           <div class="glass-badge">
@@ -28,7 +28,7 @@
         <div class="posh-text-box">
           <div class="greeting-tag">Hello, I am</div>
           <h2 class="posh-name">Thisara Gunasekara</h2>
-          <h3 class="posh-role">Digital Marketing Coordinator & Manager</h3>
+          <h3 class="posh-role">Software Engineer & Digital Marketing Lead</h3>
           <p class="posh-desc">
             If your company's image needs to improve in the digital space, you've come to the right place. 
             I specialize in creating modern, SEO-friendly websites and coordinating comprehensive digital strategies 
