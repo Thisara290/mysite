@@ -31,7 +31,10 @@ To prevent 404 errors when refreshing Vue Router pages (like `/about`, `/project
 ---
 
 ## 📊 Analytics & Services
+* **Clerion Analytics:**
+  * **Website ID:** `site_fcb8dc14eab2a60af97744f1e2107929`
+  * **API Key:** `cle_57a3e3f06623582ded189bcc2ebac462a9942003`
+  * Configured in: `<head>` of `index.html`
 * **Google Analytics:** `G-6K32310PC7`
 * **Dashify Analytics:** Configured in `index.html` (Website ID: `site_b838c6bc7df84597`)
 * **Media / Images:** Cloudinary
-
