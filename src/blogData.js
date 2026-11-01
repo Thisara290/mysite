@@ -275,5 +275,23 @@ export const blogs = [
       { type: 'text', value: 'If your business is growing and moving beyond the starting stage, this is probably the right time to invest in a professional website.' },
       { type: 'text', value: 'If you need support with websites or digital marketing for your business, feel free to contact me ❤️' }
     ]
+  },
+  {
+    id: 7,
+    slug: 'every-business-has-3-main-stages',
+    language: 'en',
+    title: 'Every Business Has 3 Main Stages',
+    category: 'Business Strategy',
+    date: 'May 14, 2026',
+    excerpt: 'When starting a business, the first thing most people experience is failure or loss. But success usually comes after consistency, patience, and learning.',
+    intro: 'First, you <strong>lose.</strong><br>Then, you <strong>learn.</strong><br>Then, you <strong>win.</strong>',
+    sections: [
+      { type: 'text', value: 'When starting a business, the first thing most people experience is <strong>failure or loss</strong>. That’s normal. Every successful business owner has gone through that stage at some point.' },
+      { type: 'text', value: 'So don’t stress too much when things don’t work immediately.' },
+      { type: 'text', value: 'The second stage is where you <strong>start learning</strong>. You understand your customers better, you fix your mistakes, and you slowly improve yourself and your business.' },
+      { type: 'text', value: 'Then comes the <strong>winning stage</strong>.' },
+      { type: 'text', value: 'But most people give up during the first stage without realizing that success usually comes after <strong>consistency, patience, and learning.</strong>' },
+      { type: 'takeaway', value: 'So don’t lose your business idea just because the beginning feels hard. Keep going.' }
+    ]
   }
 ]

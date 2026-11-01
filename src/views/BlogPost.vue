@@ -178,7 +178,7 @@ export default {
 .post-hero {
   background: var(--bg-primary);
   border-bottom: 1px solid var(--border-color);
-  padding: 150px 24px 60px;
+  padding: 150px 24px 30px;
   position: relative;
   overflow: hidden;
 }
@@ -252,7 +252,7 @@ export default {
   font-weight: 800;
   color: var(--text-primary);
   line-height: 1.15;
-  margin-bottom: 24px;
+  margin-bottom: 48px;
 }
 
 .post-intro {
@@ -265,7 +265,7 @@ export default {
 .post-container {
   max-width: 780px;
   margin: 0 auto;
-  padding: 60px 24px 0;
+  padding: 30px 24px 0;
 }
 
 .post-article {
