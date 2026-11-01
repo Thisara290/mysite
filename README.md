@@ -1,5 +1,32 @@
-# Vue 3 + Vite
+# Thisara Gunasekara - Personal Portfolio
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+Personal website and portfolio built with **Vue 3** and **Vite**.
 
-Learn more about IDE Support for Vue in the [Vue Docs Scaling up Guide](https://vuejs.org/guide/scaling-up/tooling.html#ide-support).
+## 🛠 Tech Stack
+* **Framework:** Vue 3 (Vite)
+* **Routing:** Vue Router 4 (HTML5 history mode)
+* **Styling:** Custom CSS with Dark / Light Theme support
+* **Hosting:** Render (Static Site)
+* **Domain:** Namecheap (`thisaragunasekara.com`)
+
+## 🚀 Getting Started
+
+### Install Dependencies
+```bash
+npm install
+```
+
+### Development Server
+```bash
+npm run dev
+```
+
+### Production Build
+```bash
+npm run build
+```
+
+## 📖 Deployment & Hosting Info
+Administrative details for domain and hosting (Namecheap, Render, Analytics) are documented in:
+👉 [DEPLOYMENT.md](file:///d:/contruction/mysit/personal-website/DEPLOYMENT.md)
+
